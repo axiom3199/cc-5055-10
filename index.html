@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>室内建筑线条相机标定与测量</title>
+<style>
+  :root {
+    --bg: #14161c; --panel: #1e222c; --line: #2c3140;
+    --text: #d8dce6; --dim: #8a90a0; --accent: #4da3ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 12px; background: var(--bg); color: var(--text);
+    font: 13px/1.5 "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  #left { flex: 0 0 auto; }
+  #view { width: 960px; max-width: calc(100vw - 360px); border: 1px solid var(--line); display: block; cursor: crosshair; background: #101218; }
+  #hint { color: var(--dim); margin-top: 6px; }
+  #hint b { color: var(--text); }
+  #panel { flex: 1 1 300px; min-width: 280px; max-width: 380px; }
+  section {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 6px;
+    padding: 8px 10px; margin-bottom: 10px;
+  }
+  h2 { font-size: 13px; margin: 0 0 6px; color: var(--accent); font-weight: 600; }
+  button {
+    background: #2a3040; color: var(--text); border: 1px solid #3a4258;
+    border-radius: 4px; padding: 3px 10px; margin: 2px 4px 2px 0; cursor: pointer; font-size: 12px;
+  }
+  button:hover { background: #343c52; }
+  button.on { background: var(--accent); color: #0c1018; border-color: var(--accent); }
+  button:disabled { opacity: 0.4; cursor: default; }
+  select, input[type=checkbox] { margin: 2px 4px 2px 0; }
+  select { background: #2a3040; color: var(--text); border: 1px solid #3a4258; border-radius: 4px; padding: 2px 4px; }
+  .row { margin: 3px 0; }
+  .dim { color: var(--dim); }
+  .warn { color: #f0a35e; }
+  .bad { color: #e74c3c; }
+  .ok { color: #2ecc71; }
+  .kv { display: flex; justify-content: space-between; }
+  .kv span:last-child { font-variant-numeric: tabular-nums; }
+  table { border-collapse: collapse; width: 100%; margin-top: 4px; }
+  th, td { border: 1px solid var(--line); padding: 2px 6px; text-align: right; font-size: 12px; }
+  th { background: #262b38; }
+  td:first-child, th:first-child { text-align: left; }
+  #msgs { margin: 4px 0 0; padding-left: 18px; color: #f0a35e; }
+  #msgs li { margin: 2px 0; }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin: 0 4px 0 10px; }
+</style>
+</head>
+<body>
+<div id="left">
+  <canvas id="view" width="960" height="540"></canvas>
+  <div id="hint">
+    点击线段选中，按 <b>1/2/3</b> 标为 横向X/竖向Y/纵深Z，<b>0</b> 取消分组，<b>Ctrl+Z</b> 撤销。
+    拖动白尺两端手柄测量地面距离；红色带为擦地角过小、不可测区域。
+  </div>
+</div>
+<div id="panel">
+  <section>
+    <h2>机位</h2>
+    <div class="row"><select id="shotSel" style="width:100%"></select></div>
+    <div class="row dim" id="shotDesc"></div>
+    <div class="row"><button id="resetBtn">重置本机位</button></div>
+  </section>
+  <section>
+    <h2>线族分组</h2>
+    <div class="row">
+      <button id="autoBtn">自动分组</button>
+      <button id="clearBtn">清除分组</button>
+      <button id="undoBtn">撤销 (Ctrl+Z)</button>
+    </div>
+    <div class="row legend">
+      <span id="grpCount" class="dim"></span><br>
+      <i style="background:#e74c3c"></i>横向 X
+      <i style="background:#2ecc71"></i>竖向 Y
+      <i style="background:#3498db"></i>纵深 Z
+      <i style="background:#888"></i>未分组
+    </div>
+  </section>
+  <section>
+    <h2>镜头畸变</h2>
+    <div class="row"><button id="k1Btn">估计畸变 k1</button>
+      <label><input type="checkbox" id="k1Apply"> 应用校正</label></div>
+    <div class="row" id="k1Info"><span class="dim">未估计（畸变机位请先估计再解算）</span></div>
+  </section>
+  <section>
+    <h2>相机解算</h2>
+    <div class="row">
+      焦距：<label><input type="radio" name="fmode" value="auto" checked> 自动</label>
+      <label><input type="radio" name="fmode" value="independent"> 独立重算</label>
+      <label><input type="radio" name="fmode" value="chained"> 沿用上一段</label>
+    </div>
+    <div class="row">
+      <label><input type="checkbox" id="zeroRoll" checked> 单族线时按零滚转补全</label>
+    </div>
+    <div class="row">
+      <button id="knownBtn">改标已知地面点</button>
+      <span id="knownInfo" class="dim"></span>
+    </div>
+    <div class="row"><button id="solveBtn" style="font-weight:700">解算相机</button>
+      <span class="dim" id="chainInfo"></span></div>
+    <div id="solInfo"></div>
+    <ul id="msgs"></ul>
+  </section>
+  <section>
+    <h2>显示</h2>
+    <div class="row">
+      <label><input type="checkbox" id="showVps" checked> 灭点</label>
+      <label><input type="checkbox" id="showHorizon" checked> 地平线</label>
+      <label><input type="checkbox" id="showBand" checked> 不可测带</label>
+      <label><input type="checkbox" id="showGrid"> 预测网格</label>
+    </div>
+    <div id="vpInfo" class="dim"></div>
+  </section>
+  <section>
+    <h2>虚拟测量尺</h2>
+    <div id="rulerInfo" class="dim">解算后可测量；拖动尺端手柄。</div>
+    <div class="row"><button id="restoreBtn" style="display:none">恢复被遮横梁并重投尺端</button></div>
+    <div id="ghostInfo"></div>
+  </section>
+  <section>
+    <h2>校验（未参与约束的地砖边）</h2>
+    <div class="row">
+      <button id="valBtn">校验当前解</button>
+      <button id="cmpBtn">对比 沿用/独立</button>
+    </div>
+    <div id="valInfo" class="dim"></div>
+    <div id="cmpInfo"></div>
+  </section>
+</div>
+<script src="js/geom.js"></script>
+<script src="js/scene.js"></script>
+<script src="js/estimate.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
