@@ -1,0 +1,1266 @@
+{
+  "packVersion": 1,
+  "kind": "ambiguity-indoor",
+  "createdAt": "2026-11-24T12:43:33.677Z",
+  "generator": "tools/build-packs.cjs::buildAmbiguityPack",
+  "provenance": {
+    "generator": "tools/build-packs.cjs::buildAmbiguityPack",
+    "sourceModules": [
+      "js/ambiguity.js"
+    ],
+    "params": {
+      "halfW": 2,
+      "height": 2.6,
+      "yFloor": 0.3,
+      "zBack": 12,
+      "zNear": 7,
+      "fA": 760,
+      "czA": 3,
+      "czB": 0.8,
+      "camY": 1.5,
+      "noiseSigma": 0.7
+    },
+    "truth": {
+      "cameras": [
+        {
+          "id": "amb-A",
+          "cam": {
+            "f": 760,
+            "cx": 480,
+            "cy": 270,
+            "C": [
+              0,
+              1.5,
+              3
+            ],
+            "yaw": 3.141592653589793,
+            "pitch": 0,
+            "roll": 0,
+            "k1": 0
+          }
+        },
+        {
+          "id": "amb-B",
+          "cam": {
+            "f": 945.7777777777778,
+            "cx": 480,
+            "cy": 270,
+            "C": [
+              0,
+              1.5,
+              0.8
+            ],
+            "yaw": 3.141592653589793,
+            "pitch": 0,
+            "roll": 0,
+            "k1": 0
+          }
+        }
+      ]
+    }
+  },
+  "content": {
+    "stage": {
+      "halfW": 2,
+      "height": 2.6,
+      "yFloor": 0.3,
+      "zBack": 12,
+      "zNear": 7,
+      "fA": 760,
+      "czA": 3,
+      "czB": 0.8,
+      "camY": 1.5,
+      "noiseSigma": 0.7
+    },
+    "modelLines": [
+      {
+        "tag": "back:floor",
+        "p1": [
+          -2,
+          0.3,
+          12
+        ],
+        "p2": [
+          2,
+          0.3,
+          12
+        ],
+        "family": "X",
+        "role": "back",
+        "control": false
+      },
+      {
+        "tag": "back:ceil",
+        "p1": [
+          -2,
+          2.9,
+          12
+        ],
+        "p2": [
+          2,
+          2.9,
+          12
+        ],
+        "family": "X",
+        "role": "back",
+        "control": false
+      },
+      {
+        "tag": "back:left",
+        "p1": [
+          -2,
+          0.3,
+          12
+        ],
+        "p2": [
+          -2,
+          2.9,
+          12
+        ],
+        "family": "Y",
+        "role": "back",
+        "control": false
+      },
+      {
+        "tag": "back:right",
+        "p1": [
+          2,
+          0.3,
+          12
+        ],
+        "p2": [
+          2,
+          2.9,
+          12
+        ],
+        "family": "Y",
+        "role": "back",
+        "control": false
+      },
+      {
+        "tag": "back:v:-1",
+        "p1": [
+          -1,
+          0.3,
+          12
+        ],
+        "p2": [
+          -1,
+          2.9,
+          12
+        ],
+        "family": "Y",
+        "role": "back",
+        "control": false
+      },
+      {
+        "tag": "back:v:0",
+        "p1": [
+          0,
+          0.3,
+          12
+        ],
+        "p2": [
+          0,
+          2.9,
+          12
+        ],
+        "family": "Y",
+        "role": "back",
+        "control": false
+      },
+      {
+        "tag": "back:v:1",
+        "p1": [
+          1,
+          0.3,
+          12
+        ],
+        "p2": [
+          1,
+          2.9,
+          12
+        ],
+        "family": "Y",
+        "role": "back",
+        "control": false
+      },
+      {
+        "tag": "back:h:1.2",
+        "p1": [
+          -2,
+          1.2,
+          12
+        ],
+        "p2": [
+          2,
+          1.2,
+          12
+        ],
+        "family": "X",
+        "role": "back",
+        "control": false
+      },
+      {
+        "tag": "back:h:2.1",
+        "p1": [
+          -2,
+          2.1,
+          12
+        ],
+        "p2": [
+          2,
+          2.1,
+          12
+        ],
+        "family": "X",
+        "role": "back",
+        "control": false
+      },
+      {
+        "tag": "side:floor:x=-2",
+        "p1": [
+          -2,
+          0.3,
+          7
+        ],
+        "p2": [
+          -2,
+          0.3,
+          12
+        ],
+        "family": "Z",
+        "role": "side",
+        "control": false
+      },
+      {
+        "tag": "side:ceil:x=-2",
+        "p1": [
+          -2,
+          2.9,
+          7
+        ],
+        "p2": [
+          -2,
+          2.9,
+          12
+        ],
+        "family": "Z",
+        "role": "side",
+        "control": false
+      },
+      {
+        "tag": "side:h:1.2:x=-2",
+        "p1": [
+          -2,
+          1.2,
+          7
+        ],
+        "p2": [
+          -2,
+          1.2,
+          12
+        ],
+        "family": "Z",
+        "role": "side",
+        "control": false
+      },
+      {
+        "tag": "side:h:2.1:x=-2",
+        "p1": [
+          -2,
+          2.1,
+          7
+        ],
+        "p2": [
+          -2,
+          2.1,
+          12
+        ],
+        "family": "Z",
+        "role": "side",
+        "control": false
+      },
+      {
+        "tag": "side:nearV:x=-2",
+        "p1": [
+          -2,
+          0.3,
+          7
+        ],
+        "p2": [
+          -2,
+          2.9,
+          7
+        ],
+        "family": "Y",
+        "role": "side",
+        "control": true
+      },
+      {
+        "tag": "side:v:8.5:x=-2",
+        "p1": [
+          -2,
+          0.3,
+          8.5
+        ],
+        "p2": [
+          -2,
+          2.9,
+          8.5
+        ],
+        "family": "Y",
+        "role": "side",
+        "control": false
+      },
+      {
+        "tag": "side:v:10:x=-2",
+        "p1": [
+          -2,
+          0.3,
+          10
+        ],
+        "p2": [
+          -2,
+          2.9,
+          10
+        ],
+        "family": "Y",
+        "role": "side",
+        "control": false
+      },
+      {
+        "tag": "side:floor:x=2",
+        "p1": [
+          2,
+          0.3,
+          7
+        ],
+        "p2": [
+          2,
+          0.3,
+          12
+        ],
+        "family": "Z",
+        "role": "side",
+        "control": false
+      },
+      {
+        "tag": "side:ceil:x=2",
+        "p1": [
+          2,
+          2.9,
+          7
+        ],
+        "p2": [
+          2,
+          2.9,
+          12
+        ],
+        "family": "Z",
+        "role": "side",
+        "control": false
+      },
+      {
+        "tag": "side:h:1.2:x=2",
+        "p1": [
+          2,
+          1.2,
+          7
+        ],
+        "p2": [
+          2,
+          1.2,
+          12
+        ],
+        "family": "Z",
+        "role": "side",
+        "control": false
+      },
+      {
+        "tag": "side:h:2.1:x=2",
+        "p1": [
+          2,
+          2.1,
+          7
+        ],
+        "p2": [
+          2,
+          2.1,
+          12
+        ],
+        "family": "Z",
+        "role": "side",
+        "control": false
+      },
+      {
+        "tag": "side:nearV:x=2",
+        "p1": [
+          2,
+          0.3,
+          7
+        ],
+        "p2": [
+          2,
+          2.9,
+          7
+        ],
+        "family": "Y",
+        "role": "side",
+        "control": true
+      },
+      {
+        "tag": "side:v:8.5:x=2",
+        "p1": [
+          2,
+          0.3,
+          8.5
+        ],
+        "p2": [
+          2,
+          2.9,
+          8.5
+        ],
+        "family": "Y",
+        "role": "side",
+        "control": false
+      },
+      {
+        "tag": "side:v:10:x=2",
+        "p1": [
+          2,
+          0.3,
+          10
+        ],
+        "p2": [
+          2,
+          2.9,
+          10
+        ],
+        "family": "Y",
+        "role": "side",
+        "control": false
+      }
+    ],
+    "shots": [
+      {
+        "id": "amb-A",
+        "name": "歧义片A（近，短焦）",
+        "image": {
+          "W": 960,
+          "H": 540,
+          "cx": 480,
+          "cy": 270
+        },
+        "controlTags": [
+          "side:nearV:x=-2",
+          "side:nearV:x=2"
+        ],
+        "observedLines": [
+          {
+            "id": "a0:0",
+            "pts": [
+              [
+                650,
+                372
+              ],
+              [
+                311.3,
+                371.7
+              ]
+            ],
+            "family": "X",
+            "role": "back",
+            "tag": "back:floor",
+            "control": false
+          },
+          {
+            "id": "a0:1",
+            "pts": [
+              [
+                650,
+                151
+              ],
+              [
+                310.7,
+                151.7
+              ]
+            ],
+            "family": "X",
+            "role": "back",
+            "tag": "back:ceil",
+            "control": false
+          },
+          {
+            "id": "a0:2",
+            "pts": [
+              [
+                648,
+                372
+              ],
+              [
+                649.9,
+                151.8
+              ]
+            ],
+            "family": "Y",
+            "role": "back",
+            "tag": "back:left",
+            "control": false
+          },
+          {
+            "id": "a0:3",
+            "pts": [
+              [
+                311,
+                371
+              ],
+              [
+                311.6,
+                151.3
+              ]
+            ],
+            "family": "Y",
+            "role": "back",
+            "tag": "back:right",
+            "control": false
+          },
+          {
+            "id": "a0:4",
+            "pts": [
+              [
+                564,
+                370
+              ],
+              [
+                563.6,
+                151.5
+              ]
+            ],
+            "family": "Y",
+            "role": "back",
+            "tag": "back:v:-1",
+            "control": false
+          },
+          {
+            "id": "a0:5",
+            "pts": [
+              [
+                480,
+                371
+              ],
+              [
+                479.1,
+                152.1
+              ]
+            ],
+            "family": "Y",
+            "role": "back",
+            "tag": "back:v:0",
+            "control": false
+          },
+          {
+            "id": "a0:6",
+            "pts": [
+              [
+                394,
+                372
+              ],
+              [
+                395.1,
+                152.6
+              ]
+            ],
+            "family": "Y",
+            "role": "back",
+            "tag": "back:v:1",
+            "control": false
+          },
+          {
+            "id": "a0:7",
+            "pts": [
+              [
+                649,
+                295
+              ],
+              [
+                310.8,
+                293.6
+              ]
+            ],
+            "family": "X",
+            "role": "back",
+            "tag": "back:h:1.2",
+            "control": false
+          },
+          {
+            "id": "a0:8",
+            "pts": [
+              [
+                648,
+                219
+              ],
+              [
+                312.4,
+                218.8
+              ]
+            ],
+            "family": "X",
+            "role": "back",
+            "tag": "back:h:2.1",
+            "control": false
+          },
+          {
+            "id": "a0:9",
+            "pts": [
+              [
+                861,
+                499
+              ],
+              [
+                648.3,
+                370.8
+              ]
+            ],
+            "family": "Z",
+            "role": "side",
+            "tag": "side:floor:x=-2",
+            "control": false
+          },
+          {
+            "id": "a0:10",
+            "pts": [
+              [
+                860,
+                4
+              ],
+              [
+                649.1,
+                152.1
+              ]
+            ],
+            "family": "Z",
+            "role": "side",
+            "tag": "side:ceil:x=-2",
+            "control": false
+          },
+          {
+            "id": "a0:11",
+            "pts": [
+              [
+                860,
+                327
+              ],
+              [
+                648.5,
+                294.6
+              ]
+            ],
+            "family": "Z",
+            "role": "side",
+            "tag": "side:h:1.2:x=-2",
+            "control": false
+          },
+          {
+            "id": "a0:12",
+            "pts": [
+              [
+                861,
+                155
+              ],
+              [
+                650,
+                220.3
+              ]
+            ],
+            "family": "Z",
+            "role": "side",
+            "tag": "side:h:2.1:x=-2",
+            "control": false
+          },
+          {
+            "id": "a0:13",
+            "pts": [
+              [
+                860,
+                498
+              ],
+              [
+                859.1,
+                4.4
+              ]
+            ],
+            "family": "Y",
+            "role": "side",
+            "tag": "side:nearV:x=-2",
+            "control": true
+          },
+          {
+            "id": "a0:14",
+            "pts": [
+              [
+                758,
+                436
+              ],
+              [
+                757.3,
+                76
+              ]
+            ],
+            "family": "Y",
+            "role": "side",
+            "tag": "side:v:8.5:x=-2",
+            "control": false
+          },
+          {
+            "id": "a0:15",
+            "pts": [
+              [
+                697,
+                401
+              ],
+              [
+                697.5,
+                119.4
+              ]
+            ],
+            "family": "Y",
+            "role": "side",
+            "tag": "side:v:10:x=-2",
+            "control": false
+          },
+          {
+            "id": "a0:16",
+            "pts": [
+              [
+                100,
+                499
+              ],
+              [
+                311.3,
+                370.8
+              ]
+            ],
+            "family": "Z",
+            "role": "side",
+            "tag": "side:floor:x=2",
+            "control": false
+          },
+          {
+            "id": "a0:17",
+            "pts": [
+              [
+                99,
+                4
+              ],
+              [
+                310.9,
+                151.4
+              ]
+            ],
+            "family": "Z",
+            "role": "side",
+            "tag": "side:ceil:x=2",
+            "control": false
+          },
+          {
+            "id": "a0:18",
+            "pts": [
+              [
+                99,
+                328
+              ],
+              [
+                310.5,
+                297.4
+              ]
+            ],
+            "family": "Z",
+            "role": "side",
+            "tag": "side:h:1.2:x=2",
+            "control": false
+          },
+          {
+            "id": "a0:19",
+            "pts": [
+              [
+                101,
+                157
+              ],
+              [
+                310.1,
+                219.3
+              ]
+            ],
+            "family": "Z",
+            "role": "side",
+            "tag": "side:h:2.1:x=2",
+            "control": false
+          },
+          {
+            "id": "a0:20",
+            "pts": [
+              [
+                99,
+                498
+              ],
+              [
+                99.4,
+                3.9
+              ]
+            ],
+            "family": "Y",
+            "role": "side",
+            "tag": "side:nearV:x=2",
+            "control": true
+          },
+          {
+            "id": "a0:21",
+            "pts": [
+              [
+                203,
+                436
+              ],
+              [
+                203.7,
+                77.1
+              ]
+            ],
+            "family": "Y",
+            "role": "side",
+            "tag": "side:v:8.5:x=2",
+            "control": false
+          },
+          {
+            "id": "a0:22",
+            "pts": [
+              [
+                262,
+                399
+              ],
+              [
+                263.4,
+                118.6
+              ]
+            ],
+            "family": "Y",
+            "role": "side",
+            "tag": "side:v:10:x=2",
+            "control": false
+          }
+        ]
+      },
+      {
+        "id": "amb-B",
+        "name": "歧义片B（远，长焦）",
+        "image": {
+          "W": 960,
+          "H": 540,
+          "cx": 480,
+          "cy": 270
+        },
+        "controlTags": [
+          "side:nearV:x=-2",
+          "side:nearV:x=2"
+        ],
+        "observedLines": [
+          {
+            "id": "a1:0",
+            "pts": [
+              [
+                650,
+                372
+              ],
+              [
+                311.3,
+                371.7
+              ]
+            ],
+            "family": "X",
+            "role": "back",
+            "tag": "back:floor",
+            "control": false
+          },
+          {
+            "id": "a1:1",
+            "pts": [
+              [
+                650,
+                151
+              ],
+              [
+                310.7,
+                151.7
+              ]
+            ],
+            "family": "X",
+            "role": "back",
+            "tag": "back:ceil",
+            "control": false
+          },
+          {
+            "id": "a1:2",
+            "pts": [
+              [
+                648,
+                372
+              ],
+              [
+                649.9,
+                151.8
+              ]
+            ],
+            "family": "Y",
+            "role": "back",
+            "tag": "back:left",
+            "control": false
+          },
+          {
+            "id": "a1:3",
+            "pts": [
+              [
+                311,
+                371
+              ],
+              [
+                311.6,
+                151.3
+              ]
+            ],
+            "family": "Y",
+            "role": "back",
+            "tag": "back:right",
+            "control": false
+          },
+          {
+            "id": "a1:4",
+            "pts": [
+              [
+                564,
+                370
+              ],
+              [
+                563.6,
+                151.5
+              ]
+            ],
+            "family": "Y",
+            "role": "back",
+            "tag": "back:v:-1",
+            "control": false
+          },
+          {
+            "id": "a1:5",
+            "pts": [
+              [
+                480,
+                371
+              ],
+              [
+                479.1,
+                152.1
+              ]
+            ],
+            "family": "Y",
+            "role": "back",
+            "tag": "back:v:0",
+            "control": false
+          },
+          {
+            "id": "a1:6",
+            "pts": [
+              [
+                394,
+                372
+              ],
+              [
+                395.1,
+                152.6
+              ]
+            ],
+            "family": "Y",
+            "role": "back",
+            "tag": "back:v:1",
+            "control": false
+          },
+          {
+            "id": "a1:7",
+            "pts": [
+              [
+                649,
+                295
+              ],
+              [
+                310.8,
+                293.6
+              ]
+            ],
+            "family": "X",
+            "role": "back",
+            "tag": "back:h:1.2",
+            "control": false
+          },
+          {
+            "id": "a1:8",
+            "pts": [
+              [
+                648,
+                219
+              ],
+              [
+                312.4,
+                218.8
+              ]
+            ],
+            "family": "X",
+            "role": "back",
+            "tag": "back:h:2.1",
+            "control": false
+          },
+          {
+            "id": "a1:9",
+            "pts": [
+              [
+                786,
+                454
+              ],
+              [
+                648.3,
+                370.8
+              ]
+            ],
+            "family": "Z",
+            "role": "side",
+            "tag": "side:floor:x=-2",
+            "control": false
+          },
+          {
+            "id": "a1:10",
+            "pts": [
+              [
+                785,
+                56
+              ],
+              [
+                649.1,
+                152.1
+              ]
+            ],
+            "family": "Z",
+            "role": "side",
+            "tag": "side:ceil:x=-2",
+            "control": false
+          },
+          {
+            "id": "a1:11",
+            "pts": [
+              [
+                785,
+                316
+              ],
+              [
+                648.5,
+                294.6
+              ]
+            ],
+            "family": "Z",
+            "role": "side",
+            "tag": "side:h:1.2:x=-2",
+            "control": false
+          },
+          {
+            "id": "a1:12",
+            "pts": [
+              [
+                786,
+                178
+              ],
+              [
+                650,
+                220.3
+              ]
+            ],
+            "family": "Z",
+            "role": "side",
+            "tag": "side:h:2.1:x=-2",
+            "control": false
+          },
+          {
+            "id": "a1:13",
+            "pts": [
+              [
+                786,
+                453
+              ],
+              [
+                784.2,
+                56.9
+              ]
+            ],
+            "family": "Y",
+            "role": "side",
+            "tag": "side:nearV:x=-2",
+            "control": true
+          },
+          {
+            "id": "a1:14",
+            "pts": [
+              [
+                727,
+                417
+              ],
+              [
+                726.6,
+                97.5
+              ]
+            ],
+            "family": "Y",
+            "role": "side",
+            "tag": "side:v:8.5:x=-2",
+            "control": false
+          },
+          {
+            "id": "a1:15",
+            "pts": [
+              [
+                685,
+                394
+              ],
+              [
+                686,
+                127.4
+              ]
+            ],
+            "family": "Y",
+            "role": "side",
+            "tag": "side:v:10:x=-2",
+            "control": false
+          },
+          {
+            "id": "a1:16",
+            "pts": [
+              [
+                175,
+                454
+              ],
+              [
+                311.3,
+                370.8
+              ]
+            ],
+            "family": "Z",
+            "role": "side",
+            "tag": "side:floor:x=2",
+            "control": false
+          },
+          {
+            "id": "a1:17",
+            "pts": [
+              [
+                174,
+                57
+              ],
+              [
+                310.9,
+                151.4
+              ]
+            ],
+            "family": "Z",
+            "role": "side",
+            "tag": "side:ceil:x=2",
+            "control": false
+          },
+          {
+            "id": "a1:18",
+            "pts": [
+              [
+                174,
+                316
+              ],
+              [
+                310.5,
+                297.4
+              ]
+            ],
+            "family": "Z",
+            "role": "side",
+            "tag": "side:h:1.2:x=2",
+            "control": false
+          },
+          {
+            "id": "a1:19",
+            "pts": [
+              [
+                175,
+                180
+              ],
+              [
+                310.1,
+                219.3
+              ]
+            ],
+            "family": "Z",
+            "role": "side",
+            "tag": "side:h:2.1:x=2",
+            "control": false
+          },
+          {
+            "id": "a1:20",
+            "pts": [
+              [
+                174,
+                453
+              ],
+              [
+                174.3,
+                56.4
+              ]
+            ],
+            "family": "Y",
+            "role": "side",
+            "tag": "side:nearV:x=2",
+            "control": true
+          },
+          {
+            "id": "a1:21",
+            "pts": [
+              [
+                233,
+                417
+              ],
+              [
+                234.4,
+                98.6
+              ]
+            ],
+            "family": "Y",
+            "role": "side",
+            "tag": "side:v:8.5:x=2",
+            "control": false
+          },
+          {
+            "id": "a1:22",
+            "pts": [
+              [
+                274,
+                392
+              ],
+              [
+                274.9,
+                126.7
+              ]
+            ],
+            "family": "Y",
+            "role": "side",
+            "tag": "side:v:10:x=2",
+            "control": false
+          }
+        ]
+      }
+    ],
+    "solveStages": {
+      "stage1": "back-only（侧墙控制点 withheld）",
+      "stage2": "with-side-control（控制点解锁后模型选择）"
+    }
+  }
+}

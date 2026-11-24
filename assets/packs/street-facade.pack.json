@@ -1,0 +1,4023 @@
+{
+  "packVersion": 1,
+  "kind": "street-facade",
+  "createdAt": "2026-11-24T12:43:33.675Z",
+  "generator": "tools/build-packs.cjs::buildStreetPack",
+  "provenance": {
+    "generator": "tools/build-packs.cjs::buildStreetPack",
+    "sourceModules": [
+      "js/facade.js",
+      "js/street.js",
+      "js/replay.js"
+    ],
+    "params": {
+      "facade": {
+        "wall": {
+          "x0": -6,
+          "x1": 6,
+          "yTop": 3.6,
+          "z": 0
+        },
+        "sideWall": {
+          "x": 6,
+          "z1": 8,
+          "yTop": 3.6
+        },
+        "eave": {
+          "min": [
+            -6.2,
+            3.3,
+            -0.6
+          ],
+          "max": [
+            6.2,
+            3.6,
+            0.85
+          ]
+        },
+        "fascia": {
+          "min": [
+            -6.2,
+            3.05,
+            0.78
+          ],
+          "max": [
+            6.2,
+            3.3,
+            0.85
+          ]
+        },
+        "sign": {
+          "min": [
+            -1.6,
+            2.5,
+            -0.1
+          ],
+          "max": [
+            1.6,
+            3.18,
+            0.12
+          ]
+        },
+        "ground": {
+          "y": 0
+        }
+      },
+      "cameraDefs": [
+        {
+          "f": 820,
+          "cx": 480,
+          "cy": 270,
+          "k1": 0,
+          "C": [
+            1.7,
+            1.5,
+            5
+          ],
+          "yaw": -0.28,
+          "pitch": 0.03,
+          "roll": 0
+        },
+        {
+          "f": 820,
+          "cx": 480,
+          "cy": 270,
+          "k1": 0,
+          "C": [
+            -0.5,
+            1.6,
+            16
+          ],
+          "yaw": 0.1,
+          "pitch": -0.02,
+          "roll": 0
+        },
+        {
+          "f": 820,
+          "cx": 480,
+          "cy": 270,
+          "k1": 0,
+          "C": [
+            -0.5,
+            1.6,
+            6.2
+          ],
+          "yaw": 0.1,
+          "pitch": -0.03,
+          "roll": 0
+        }
+      ],
+      "image": {
+        "W": 960,
+        "H": 540
+      },
+      "rng": "mulberry32 per-shot (facade.renderShot)"
+    },
+    "truth": {
+      "cameras": [
+        {
+          "id": "A",
+          "cam": {
+            "f": 820,
+            "cx": 480,
+            "cy": 270,
+            "k1": 0,
+            "C": [
+              1.7,
+              1.5,
+              5
+            ],
+            "yaw": -0.28,
+            "pitch": 0.03,
+            "roll": 0
+          }
+        },
+        {
+          "id": "B",
+          "cam": {
+            "f": 820,
+            "cx": 480,
+            "cy": 270,
+            "k1": 0,
+            "C": [
+              -0.5,
+              1.6,
+              16
+            ],
+            "yaw": 0.1,
+            "pitch": -0.02,
+            "roll": 0
+          }
+        },
+        {
+          "id": "B'",
+          "cam": {
+            "f": 820,
+            "cx": 480,
+            "cy": 270,
+            "k1": 0,
+            "C": [
+              -0.5,
+              1.6,
+              6.2
+            ],
+            "yaw": 0.1,
+            "pitch": -0.03,
+            "roll": 0
+          }
+        }
+      ]
+    }
+  },
+  "content": {
+    "facade": {
+      "wall": {
+        "x0": -6,
+        "x1": 6,
+        "yTop": 3.6,
+        "z": 0
+      },
+      "sideWall": {
+        "x": 6,
+        "z1": 8,
+        "yTop": 3.6
+      },
+      "eave": {
+        "min": [
+          -6.2,
+          3.3,
+          -0.6
+        ],
+        "max": [
+          6.2,
+          3.6,
+          0.85
+        ]
+      },
+      "fascia": {
+        "min": [
+          -6.2,
+          3.05,
+          0.78
+        ],
+        "max": [
+          6.2,
+          3.3,
+          0.85
+        ]
+      },
+      "sign": {
+        "min": [
+          -1.6,
+          2.5,
+          -0.1
+        ],
+        "max": [
+          1.6,
+          3.18,
+          0.12
+        ]
+      },
+      "ground": {
+        "y": 0
+      }
+    },
+    "boxes": [
+      {
+        "name": "eave",
+        "min": [
+          -6.2,
+          3.3,
+          -0.6
+        ],
+        "max": [
+          6.2,
+          3.6,
+          0.85
+        ],
+        "ownerKind": "eave"
+      },
+      {
+        "name": "fascia",
+        "min": [
+          -6.2,
+          3.05,
+          0.78
+        ],
+        "max": [
+          6.2,
+          3.3,
+          0.85
+        ],
+        "ownerKind": "fascia"
+      },
+      {
+        "name": "sign",
+        "min": [
+          -1.6,
+          2.5,
+          -0.1
+        ],
+        "max": [
+          1.6,
+          3.18,
+          0.12
+        ],
+        "ownerKind": "sign"
+      }
+    ],
+    "modelLines": [
+      {
+        "tag": "facV:lo:x=-6",
+        "p1": [
+          -6,
+          0,
+          0
+        ],
+        "p2": [
+          -6,
+          1.1,
+          0
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "facV:mid:x=-6",
+        "p1": [
+          -6,
+          1.1,
+          0
+        ],
+        "p2": [
+          -6,
+          2.4,
+          0
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "facV:hi:x=-6",
+        "p1": [
+          -6,
+          2.4,
+          0
+        ],
+        "p2": [
+          -6,
+          3.3,
+          0
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "facV:lo:x=-3",
+        "p1": [
+          -3,
+          0,
+          0
+        ],
+        "p2": [
+          -3,
+          1.1,
+          0
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "facV:mid:x=-3",
+        "p1": [
+          -3,
+          1.1,
+          0
+        ],
+        "p2": [
+          -3,
+          2.4,
+          0
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "facV:hi:x=-3",
+        "p1": [
+          -3,
+          2.4,
+          0
+        ],
+        "p2": [
+          -3,
+          3.3,
+          0
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "facV:lo:x=0",
+        "p1": [
+          0,
+          0,
+          0
+        ],
+        "p2": [
+          0,
+          1.1,
+          0
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "facV:mid:x=0",
+        "p1": [
+          0,
+          1.1,
+          0
+        ],
+        "p2": [
+          0,
+          2.4,
+          0
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "facV:hi:x=0",
+        "p1": [
+          0,
+          2.4,
+          0
+        ],
+        "p2": [
+          0,
+          3.3,
+          0
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "facV:lo:x=3",
+        "p1": [
+          3,
+          0,
+          0
+        ],
+        "p2": [
+          3,
+          1.1,
+          0
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "facV:mid:x=3",
+        "p1": [
+          3,
+          1.1,
+          0
+        ],
+        "p2": [
+          3,
+          2.4,
+          0
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "facV:hi:x=3",
+        "p1": [
+          3,
+          2.4,
+          0
+        ],
+        "p2": [
+          3,
+          3.3,
+          0
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "facV:lo:x=6",
+        "p1": [
+          6,
+          0,
+          0
+        ],
+        "p2": [
+          6,
+          1.1,
+          0
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "facV:mid:x=6",
+        "p1": [
+          6,
+          1.1,
+          0
+        ],
+        "p2": [
+          6,
+          2.4,
+          0
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "facV:hi:x=6",
+        "p1": [
+          6,
+          2.4,
+          0
+        ],
+        "p2": [
+          6,
+          3.3,
+          0
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "facH:y=0",
+        "p1": [
+          -6,
+          0,
+          0
+        ],
+        "p2": [
+          6,
+          0,
+          0
+        ],
+        "family": "X",
+        "kind": "groundWall",
+        "boxOwner": null
+      },
+      {
+        "tag": "facH:y=1.1",
+        "p1": [
+          -6,
+          1.1,
+          0
+        ],
+        "p2": [
+          6,
+          1.1,
+          0
+        ],
+        "family": "X",
+        "kind": "facadeH",
+        "boxOwner": null
+      },
+      {
+        "tag": "facH:y=2.4",
+        "p1": [
+          -6,
+          2.4,
+          0
+        ],
+        "p2": [
+          6,
+          2.4,
+          0
+        ],
+        "family": "X",
+        "kind": "facadeH",
+        "boxOwner": null
+      },
+      {
+        "tag": "facH:y=3.3",
+        "p1": [
+          -6,
+          3.3,
+          0
+        ],
+        "p2": [
+          6,
+          3.3,
+          0
+        ],
+        "family": "X",
+        "kind": "facadeH",
+        "boxOwner": null
+      },
+      {
+        "tag": "eave:front:under",
+        "p1": [
+          -6.2,
+          3.3,
+          0.85
+        ],
+        "p2": [
+          6.2,
+          3.3,
+          0.85
+        ],
+        "family": "X",
+        "kind": "eave",
+        "boxOwner": 0
+      },
+      {
+        "tag": "eave:front:top",
+        "p1": [
+          -6.2,
+          3.6,
+          0.85
+        ],
+        "p2": [
+          6.2,
+          3.6,
+          0.85
+        ],
+        "family": "X",
+        "kind": "eave",
+        "boxOwner": 0
+      },
+      {
+        "tag": "eave:right:under",
+        "p1": [
+          6.2,
+          3.3,
+          -0.6
+        ],
+        "p2": [
+          6.2,
+          3.3,
+          0.85
+        ],
+        "family": "Z",
+        "kind": "eave",
+        "boxOwner": 0
+      },
+      {
+        "tag": "eave:right:top",
+        "p1": [
+          6.2,
+          3.6,
+          -0.6
+        ],
+        "p2": [
+          6.2,
+          3.6,
+          0.85
+        ],
+        "family": "Z",
+        "kind": "eave",
+        "boxOwner": 0
+      },
+      {
+        "tag": "fascia:under",
+        "p1": [
+          -6.2,
+          3.05,
+          0.85
+        ],
+        "p2": [
+          6.2,
+          3.05,
+          0.85
+        ],
+        "family": "X",
+        "kind": "fascia",
+        "boxOwner": 1
+      },
+      {
+        "tag": "fascia:top",
+        "p1": [
+          -6.2,
+          3.3,
+          0.85
+        ],
+        "p2": [
+          6.2,
+          3.3,
+          0.85
+        ],
+        "family": "X",
+        "kind": "fascia",
+        "boxOwner": 1
+      },
+      {
+        "tag": "fascia:right",
+        "p1": [
+          6.2,
+          3.05,
+          0.78
+        ],
+        "p2": [
+          6.2,
+          3.05,
+          0.85
+        ],
+        "family": "Z",
+        "kind": "fascia",
+        "boxOwner": 1
+      },
+      {
+        "tag": "sign:bot",
+        "p1": [
+          -1.6,
+          2.5,
+          0.12
+        ],
+        "p2": [
+          1.6,
+          2.5,
+          0.12
+        ],
+        "family": "X",
+        "kind": "sign",
+        "boxOwner": 2
+      },
+      {
+        "tag": "sign:top",
+        "p1": [
+          -1.6,
+          3.18,
+          0.12
+        ],
+        "p2": [
+          1.6,
+          3.18,
+          0.12
+        ],
+        "family": "X",
+        "kind": "sign",
+        "boxOwner": 2
+      },
+      {
+        "tag": "sign:left",
+        "p1": [
+          -1.6,
+          2.5,
+          0.12
+        ],
+        "p2": [
+          -1.6,
+          3.18,
+          0.12
+        ],
+        "family": "Y",
+        "kind": "sign",
+        "boxOwner": 2
+      },
+      {
+        "tag": "sign:topR",
+        "p1": [
+          1.6,
+          2.5,
+          0.12
+        ],
+        "p2": [
+          1.6,
+          3.18,
+          0.12
+        ],
+        "family": "Y",
+        "kind": "sign",
+        "boxOwner": 2
+      },
+      {
+        "tag": "sign:glyph:1",
+        "p1": [
+          -1.08,
+          2.78,
+          0.12
+        ],
+        "p2": [
+          -0.52,
+          2.78,
+          0.12
+        ],
+        "family": "X",
+        "kind": "sign",
+        "boxOwner": 2
+      },
+      {
+        "tag": "sign:glyph:2",
+        "p1": [
+          -0.28,
+          2.78,
+          0.12
+        ],
+        "p2": [
+          0.28,
+          2.78,
+          0.12
+        ],
+        "family": "X",
+        "kind": "sign",
+        "boxOwner": 2
+      },
+      {
+        "tag": "sign:glyph:3",
+        "p1": [
+          0.52,
+          2.78,
+          0.12
+        ],
+        "p2": [
+          1.08,
+          2.78,
+          0.12
+        ],
+        "family": "X",
+        "kind": "sign",
+        "boxOwner": 2
+      },
+      {
+        "tag": "side:ground",
+        "p1": [
+          6,
+          0,
+          0
+        ],
+        "p2": [
+          6,
+          0,
+          8
+        ],
+        "family": "Z",
+        "kind": "groundWall",
+        "boxOwner": null
+      },
+      {
+        "tag": "side:eaveunder",
+        "p1": [
+          6,
+          3.3,
+          0
+        ],
+        "p2": [
+          6,
+          3.3,
+          8
+        ],
+        "family": "Z",
+        "kind": "facadeH",
+        "boxOwner": null
+      },
+      {
+        "tag": "side:eavetop",
+        "p1": [
+          6,
+          3.6,
+          0
+        ],
+        "p2": [
+          6,
+          3.6,
+          8
+        ],
+        "family": "Z",
+        "kind": "eave",
+        "boxOwner": 0
+      },
+      {
+        "tag": "sideV:z=2",
+        "p1": [
+          6,
+          0,
+          2
+        ],
+        "p2": [
+          6,
+          2.4,
+          2
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "sideVhi:z=2",
+        "p1": [
+          6,
+          1.1,
+          2
+        ],
+        "p2": [
+          6,
+          3.3,
+          2
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "sideV:z=4",
+        "p1": [
+          6,
+          0,
+          4
+        ],
+        "p2": [
+          6,
+          2.4,
+          4
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "sideVhi:z=4",
+        "p1": [
+          6,
+          1.1,
+          4
+        ],
+        "p2": [
+          6,
+          3.3,
+          4
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "sideV:z=6",
+        "p1": [
+          6,
+          0,
+          6
+        ],
+        "p2": [
+          6,
+          2.4,
+          6
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "sideVhi:z=6",
+        "p1": [
+          6,
+          1.1,
+          6
+        ],
+        "p2": [
+          6,
+          3.3,
+          6
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "sideV:z=8",
+        "p1": [
+          6,
+          0,
+          8
+        ],
+        "p2": [
+          6,
+          2.4,
+          8
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "sideVhi:z=8",
+        "p1": [
+          6,
+          1.1,
+          8
+        ],
+        "p2": [
+          6,
+          3.3,
+          8
+        ],
+        "family": "Y",
+        "kind": "facadeV",
+        "boxOwner": null
+      },
+      {
+        "tag": "ground:z=3",
+        "p1": [
+          -6,
+          0,
+          3
+        ],
+        "p2": [
+          8,
+          0,
+          3
+        ],
+        "family": "X",
+        "kind": "groundLine",
+        "boxOwner": null
+      },
+      {
+        "tag": "ground:z=6",
+        "p1": [
+          -6,
+          0,
+          6
+        ],
+        "p2": [
+          8,
+          0,
+          6
+        ],
+        "family": "X",
+        "kind": "groundLine",
+        "boxOwner": null
+      },
+      {
+        "tag": "ground:z=9",
+        "p1": [
+          -6,
+          0,
+          9
+        ],
+        "p2": [
+          8,
+          0,
+          9
+        ],
+        "family": "X",
+        "kind": "groundLine",
+        "boxOwner": null
+      },
+      {
+        "tag": "ground:z=12",
+        "p1": [
+          -6,
+          0,
+          12
+        ],
+        "p2": [
+          8,
+          0,
+          12
+        ],
+        "family": "X",
+        "kind": "groundLine",
+        "boxOwner": null
+      },
+      {
+        "tag": "ground:x=-3",
+        "p1": [
+          -3,
+          0,
+          0.5
+        ],
+        "p2": [
+          -3,
+          0,
+          13
+        ],
+        "family": "Z",
+        "kind": "groundLine",
+        "boxOwner": null
+      },
+      {
+        "tag": "ground:x=0",
+        "p1": [
+          0,
+          0,
+          0.5
+        ],
+        "p2": [
+          0,
+          0,
+          13
+        ],
+        "family": "Z",
+        "kind": "groundLine",
+        "boxOwner": null
+      },
+      {
+        "tag": "ground:x=3",
+        "p1": [
+          3,
+          0,
+          0.5
+        ],
+        "p2": [
+          3,
+          0,
+          13
+        ],
+        "family": "Z",
+        "kind": "groundLine",
+        "boxOwner": null
+      }
+    ],
+    "shots": [
+      {
+        "id": "A",
+        "name": "街景机位A · 近景固定机位",
+        "desc": "近景正视，店招完整可见；作为复演中不修改的固定机位，锚点在两次求解间保持。",
+        "image": {
+          "W": 960,
+          "H": 540,
+          "cx": 480,
+          "cy": 270
+        },
+        "knownPoint": {
+          "px": [
+            -96.6009,
+            581.5482
+          ],
+          "world": [
+            0,
+            0,
+            0
+          ]
+        },
+        "anchors": [
+          {
+            "world": [
+              -3,
+              0,
+              0
+            ],
+            "px": [
+              -918.0338,
+              650.2757
+            ]
+          },
+          {
+            "world": [
+              3,
+              0,
+              0
+            ],
+            "px": [
+              458.7828,
+              535.0804
+            ]
+          },
+          {
+            "world": [
+              -3,
+              3.3,
+              0
+            ],
+            "px": [
+              -879.1489,
+              -120.3236
+            ]
+          },
+          {
+            "world": [
+              3,
+              3.3,
+              0
+            ],
+            "px": [
+              459.1854,
+              11.5158
+            ]
+          }
+        ],
+        "observedLines": [
+          {
+            "id": "f0:0",
+            "pts": [
+              [
+                457.862889,
+                534.742192
+              ],
+              [
+                457.65457,
+                358.588219
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:lo:x=3",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:1",
+            "pts": [
+              [
+                458.726074,
+                360.671206
+              ],
+              [
+                457.604481,
+                153.418369
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:mid:x=3",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:2",
+            "pts": [
+              [
+                457.563318,
+                152.303054
+              ],
+              [
+                459.087333,
+                12.175654
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=3",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:3",
+            "pts": [
+              [
+                859.894124,
+                500.565871
+              ],
+              [
+                857.332676,
+                349.626898
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:lo:x=6",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:4",
+            "pts": [
+              [
+                857.304273,
+                350.074112
+              ],
+              [
+                853.833988,
+                171.866915
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:mid:x=6",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:5",
+            "pts": [
+              [
+                853.546447,
+                171.339828
+              ],
+              [
+                853.042266,
+                51.362702
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=6",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:6",
+            "pts": [
+              [
+                405.127714,
+                540
+              ],
+              [
+                857.86835,
+                502.221828
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=0",
+            "kind": "groundWall",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:7",
+            "pts": [
+              [
+                0,
+                368.100558
+              ],
+              [
+                857.135077,
+                348.891888
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=1.1",
+            "kind": "facadeH",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:8",
+            "pts": [
+              [
+                0,
+                130.69507
+              ],
+              [
+                855.750895,
+                172.96211
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=2.4",
+            "kind": "facadeH",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:9",
+            "pts": [
+              [
+                338.582779,
+                0
+              ],
+              [
+                852.589792,
+                50.620099
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=3.3",
+            "kind": "facadeH",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:10",
+            "pts": [
+              [
+                844.202758,
+                0
+              ],
+              [
+                960,
+                13.653018
+              ]
+            ],
+            "family": "X",
+            "srcTag": "eave:front:under",
+            "kind": "eave",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:11",
+            "pts": [
+              [
+                821.969311,
+                75.98992
+              ],
+              [
+                885.005852,
+                47.048438
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "eave:right:under",
+            "kind": "eave",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:12",
+            "pts": [
+              [
+                893.257543,
+                6.807821
+              ],
+              [
+                907.456309,
+                0
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "eave:right:top",
+            "kind": "eave",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:13",
+            "pts": [
+              [
+                435.437142,
+                0
+              ],
+              [
+                960,
+                53.715997
+              ]
+            ],
+            "family": "X",
+            "srcTag": "fascia:under",
+            "kind": "fascia",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:14",
+            "pts": [
+              [
+                858.386949,
+                0
+              ],
+              [
+                960,
+                11.978768
+              ]
+            ],
+            "family": "X",
+            "srcTag": "fascia:top",
+            "kind": "fascia",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:15",
+            "pts": [
+              [
+                0,
+                106.217342
+              ],
+              [
+                228.251261,
+                119.058256
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:bot",
+            "kind": "sign",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:16",
+            "pts": [
+              [
+                210.070221,
+                0
+              ],
+              [
+                228.147257,
+                1.705014
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:top",
+            "kind": "sign",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:17",
+            "pts": [
+              [
+                227.974349,
+                118.906052
+              ],
+              [
+                229.775663,
+                1.629735
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "sign:topR",
+            "kind": "sign",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:18",
+            "pts": [
+              [
+                15.333041,
+                55.706365
+              ],
+              [
+                131.035377,
+                62.355803
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:glyph:3",
+            "kind": "sign",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:19",
+            "pts": [
+              [
+                859.215157,
+                502.855746
+              ],
+              [
+                960,
+                536.756407
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "side:ground",
+            "kind": "groundWall",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f0:20",
+            "pts": [
+              [
+                851.779458,
+                50.601192
+              ],
+              [
+                866.001129,
+                44.372194
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "side:eaveunder",
+            "kind": "facadeH",
+            "occluded": true,
+            "fragCount": 2
+          },
+          {
+            "id": "f0:21",
+            "pts": [
+              [
+                950.226184,
+                11.686396
+              ],
+              [
+                960,
+                7.765977
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "side:eaveunder",
+            "kind": "facadeH",
+            "occluded": true,
+            "fragCount": 2
+          },
+          {
+            "id": "f0:22",
+            "pts": [
+              [
+                871.835673,
+                1.74281
+              ],
+              [
+                875.562097,
+                0
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "side:eavetop",
+            "kind": "eave",
+            "occluded": false,
+            "fragCount": 1
+          }
+        ],
+        "directLines": [
+          {
+            "id": "d:facV:lo:x=3",
+            "pts": [
+              [
+                458.782814,
+                535.08036
+              ],
+              [
+                458.918742,
+                358.322684
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:lo:x=3",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:mid:x=3",
+            "pts": [
+              [
+                458.918742,
+                358.322684
+              ],
+              [
+                459.077157,
+                152.325225
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:mid:x=3",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:hi:x=3",
+            "pts": [
+              [
+                459.077157,
+                152.325225
+              ],
+              [
+                459.185441,
+                11.515801
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=3",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:lo:x=6",
+            "pts": [
+              [
+                859.356721,
+                501.565174
+              ],
+              [
+                857.263214,
+                349.491564
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:lo:x=6",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:mid:x=6",
+            "pts": [
+              [
+                857.263214,
+                349.491564
+              ],
+              [
+                854.818666,
+                171.918147
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:mid:x=6",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:hi:x=6",
+            "pts": [
+              [
+                854.818666,
+                171.918147
+              ],
+              [
+                853.144762,
+                50.324749
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=6",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facH:y=0",
+            "pts": [
+              [
+                399.98321,
+                540
+              ],
+              [
+                859.356721,
+                501.565174
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=0",
+            "kind": "groundWall"
+          },
+          {
+            "id": "d:facH:y=1.1",
+            "pts": [
+              [
+                0,
+                368.496708
+              ],
+              [
+                857.263214,
+                349.491564
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=1.1",
+            "kind": "facadeH"
+          },
+          {
+            "id": "d:facH:y=2.4",
+            "pts": [
+              [
+                0,
+                129.596593
+              ],
+              [
+                854.818666,
+                171.918147
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=2.4",
+            "kind": "facadeH"
+          },
+          {
+            "id": "d:facH:y=3.3",
+            "pts": [
+              [
+                342.285666,
+                0
+              ],
+              [
+                853.144762,
+                50.324749
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=3.3",
+            "kind": "facadeH"
+          },
+          {
+            "id": "d:eave:front:under",
+            "pts": [
+              [
+                845.468989,
+                0
+              ],
+              [
+                960,
+                13.564769
+              ]
+            ],
+            "family": "X",
+            "srcTag": "eave:front:under",
+            "kind": "eave"
+          },
+          {
+            "id": "d:eave:right:under",
+            "pts": [
+              [
+                821.086211,
+                73.434659
+              ],
+              [
+                960,
+                20.185719
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "eave:right:under",
+            "kind": "eave"
+          },
+          {
+            "id": "d:eave:right:top",
+            "pts": [
+              [
+                820.627112,
+                36.919851
+              ],
+              [
+                903.228395,
+                0
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "eave:right:top",
+            "kind": "eave"
+          },
+          {
+            "id": "d:fascia:under",
+            "pts": [
+              [
+                449.224058,
+                0
+              ],
+              [
+                960,
+                52.182487
+              ]
+            ],
+            "family": "X",
+            "srcTag": "fascia:under",
+            "kind": "fascia"
+          },
+          {
+            "id": "d:fascia:top",
+            "pts": [
+              [
+                845.468989,
+                0
+              ],
+              [
+                960,
+                13.564769
+              ]
+            ],
+            "family": "X",
+            "srcTag": "fascia:top",
+            "kind": "fascia"
+          },
+          {
+            "id": "d:sign:bot",
+            "pts": [
+              [
+                0,
+                106.887777
+              ],
+              [
+                227.416287,
+                119.696518
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:bot",
+            "kind": "sign"
+          },
+          {
+            "id": "d:sign:top",
+            "pts": [
+              [
+                206.975865,
+                0
+              ],
+              [
+                228.509975,
+                2.029502
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:top",
+            "kind": "sign"
+          },
+          {
+            "id": "d:sign:topR",
+            "pts": [
+              [
+                227.416287,
+                119.696518
+              ],
+              [
+                228.509975,
+                2.029502
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "sign:topR",
+            "kind": "sign"
+          },
+          {
+            "id": "d:sign:glyph:3",
+            "pts": [
+              [
+                17.351873,
+                55.969811
+              ],
+              [
+                129.950498,
+                64.074085
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:glyph:3",
+            "kind": "sign"
+          }
+        ],
+        "signObserved": {
+          "total": 325,
+          "visible": 325,
+          "fraction": 1,
+          "occlusionBoundaryY": 3.18
+        }
+      },
+      {
+        "id": "B",
+        "name": "街景机位B · 街对面（店招藏檐后）",
+        "desc": "退到街对面，店招上沿被挑檐遮住；与 A 构成双解街景素材的第二机位。",
+        "image": {
+          "W": 960,
+          "H": 540,
+          "cx": 480,
+          "cy": 270
+        },
+        "knownPoint": {
+          "px": [
+            593.9935,
+            355.2089
+          ],
+          "world": [
+            0,
+            0,
+            3
+          ]
+        },
+        "anchors": [
+          {
+            "world": [
+              -3,
+              0,
+              0
+            ],
+            "px": [
+              434.9373,
+              334.6096
+            ]
+          },
+          {
+            "world": [
+              3,
+              0,
+              0
+            ],
+            "px": [
+              747.0257,
+              337.7197
+            ]
+          }
+        ],
+        "observedLines": [
+          {
+            "id": "f1:0",
+            "pts": [
+              [
+                286.310578,
+                332.798039
+              ],
+              [
+                287.440414,
+                278.620813
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:lo:x=-6",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:1",
+            "pts": [
+              [
+                288.547253,
+                279.088669
+              ],
+              [
+                286.902207,
+                212.964757
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:mid:x=-6",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:2",
+            "pts": [
+              [
+                287.389023,
+                213.627064
+              ],
+              [
+                285.93967,
+                177.691629
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=-6",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:3",
+            "pts": [
+              [
+                435.660322,
+                334.176556
+              ],
+              [
+                436.03231,
+                279.053995
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:lo:x=-3",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:4",
+            "pts": [
+              [
+                434.464922,
+                279.038938
+              ],
+              [
+                436.43441,
+                213.195792
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:mid:x=-3",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:5",
+            "pts": [
+              [
+                433.087269,
+                215.028861
+              ],
+              [
+                435.619309,
+                176.883162
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=-3",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:6",
+            "pts": [
+              [
+                587.837119,
+                336.197269
+              ],
+              [
+                586.965734,
+                278.677503
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:lo:x=0",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:7",
+            "pts": [
+              [
+                588.314154,
+                278.619863
+              ],
+              [
+                589.922211,
+                211.416621
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:mid:x=0",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:8",
+            "pts": [
+              [
+                587.63349,
+                211.623911
+              ],
+              [
+                587.695249,
+                208.488459
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=0",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:9",
+            "pts": [
+              [
+                746.816907,
+                337.243721
+              ],
+              [
+                746.949685,
+                280.894139
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:lo:x=3",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:10",
+            "pts": [
+              [
+                748.125729,
+                279.531824
+              ],
+              [
+                748.198087,
+                210.291959
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:mid:x=3",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:11",
+            "pts": [
+              [
+                747.939368,
+                210.236777
+              ],
+              [
+                749.500327,
+                173.709166
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=3",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:12",
+            "pts": [
+              [
+                911.259057,
+                339.758816
+              ],
+              [
+                913.239548,
+                281.37009
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:lo:x=6",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:13",
+            "pts": [
+              [
+                912.472292,
+                280.527577
+              ],
+              [
+                914.612798,
+                212.074954
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:mid:x=6",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:14",
+            "pts": [
+              [
+                914.07473,
+                210.235623
+              ],
+              [
+                915.253669,
+                170.540368
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=6",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:15",
+            "pts": [
+              [
+                286.200821,
+                334.397276
+              ],
+              [
+                912.799126,
+                338.260611
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=0",
+            "kind": "groundWall",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:16",
+            "pts": [
+              [
+                285.409843,
+                278.20706
+              ],
+              [
+                914.930992,
+                280.767103
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=1.1",
+            "kind": "facadeH",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:17",
+            "pts": [
+              [
+                287.67371,
+                213.54378
+              ],
+              [
+                913.922821,
+                208.880132
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=2.4",
+            "kind": "facadeH",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:18",
+            "pts": [
+              [
+                261.612045,
+                164.255141
+              ],
+              [
+                946.482499,
+                157.123794
+              ]
+            ],
+            "family": "X",
+            "srcTag": "eave:front:under",
+            "kind": "eave",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:19",
+            "pts": [
+              [
+                260.54968,
+                148.973836
+              ],
+              [
+                947.731513,
+                140.47547
+              ]
+            ],
+            "family": "X",
+            "srcTag": "eave:front:top",
+            "kind": "eave",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:20",
+            "pts": [
+              [
+                911.108156,
+                149.487559
+              ],
+              [
+                946.531306,
+                141.174161
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "eave:right:top",
+            "kind": "eave",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:21",
+            "pts": [
+              [
+                263.170081,
+                178.072736
+              ],
+              [
+                944.634455,
+                169.165474
+              ]
+            ],
+            "family": "X",
+            "srcTag": "fascia:under",
+            "kind": "fascia",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:22",
+            "pts": [
+              [
+                261.350333,
+                164.451909
+              ],
+              [
+                946.522492,
+                154.985892
+              ]
+            ],
+            "family": "X",
+            "srcTag": "fascia:top",
+            "kind": "fascia",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:23",
+            "pts": [
+              [
+                946.273596,
+                172.354298
+              ],
+              [
+                945.629757,
+                169.591127
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "fascia:right",
+            "kind": "fascia",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:24",
+            "pts": [
+              [
+                505.867756,
+                205.944633
+              ],
+              [
+                674.838558,
+                206.119705
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:bot",
+            "kind": "sign",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:25",
+            "pts": [
+              [
+                504.967631,
+                207.561842
+              ],
+              [
+                506.957218,
+                174.412938
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "sign:left",
+            "kind": "sign",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:26",
+            "pts": [
+              [
+                673.6059,
+                204.7102
+              ],
+              [
+                674.550833,
+                173.998889
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "sign:topR",
+            "kind": "sign",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:27",
+            "pts": [
+              [
+                532.41697,
+                191.720993
+              ],
+              [
+                562.87938,
+                192.753787
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:glyph:1",
+            "kind": "sign",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:28",
+            "pts": [
+              [
+                574.037467,
+                190.11702
+              ],
+              [
+                603.186666,
+                192.839445
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:glyph:2",
+            "kind": "sign",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:29",
+            "pts": [
+              [
+                616.894214,
+                191.590263
+              ],
+              [
+                646.799632,
+                191.894608
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:glyph:3",
+            "kind": "sign",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:30",
+            "pts": [
+              [
+                911.838455,
+                339.088775
+              ],
+              [
+                960,
+                350.933423
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "side:ground",
+            "kind": "groundWall",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:31",
+            "pts": [
+              [
+                933.623222,
+                157.225599
+              ],
+              [
+                960,
+                150.306407
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "side:eaveunder",
+            "kind": "facadeH",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:32",
+            "pts": [
+              [
+                912.613074,
+                145.974201
+              ],
+              [
+                960,
+                131.483207
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "side:eavetop",
+            "kind": "eave",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:33",
+            "pts": [
+              [
+                226.381317,
+                351.196341
+              ],
+              [
+                960,
+                358.6964
+              ]
+            ],
+            "family": "X",
+            "srcTag": "ground:z=3",
+            "kind": "groundLine",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:34",
+            "pts": [
+              [
+                132.616578,
+                379.064606
+              ],
+              [
+                960,
+                390.803578
+              ]
+            ],
+            "family": "X",
+            "srcTag": "ground:z=6",
+            "kind": "groundLine",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:35",
+            "pts": [
+              [
+                0,
+                428.38432
+              ],
+              [
+                960,
+                450.18838
+              ]
+            ],
+            "family": "X",
+            "srcTag": "ground:z=9",
+            "kind": "groundLine",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:36",
+            "pts": [
+              [
+                430.63624,
+                337.641485
+              ],
+              [
+                111.428576,
+                540
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "ground:x=-3",
+            "kind": "groundLine",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:37",
+            "pts": [
+              [
+                587.548703,
+                338.553545
+              ],
+              [
+                651.41305,
+                540
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "ground:x=0",
+            "kind": "groundLine",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f1:38",
+            "pts": [
+              [
+                754.027191,
+                339.074769
+              ],
+              [
+                960,
+                433.306604
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "ground:x=3",
+            "kind": "groundLine",
+            "occluded": false,
+            "fragCount": 1
+          }
+        ],
+        "directLines": [
+          {
+            "id": "d:facV:lo:x=-6",
+            "pts": [
+              [
+                287.389843,
+                333.139213
+              ],
+              [
+                287.13267,
+                278.487689
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:lo:x=-6",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:mid:x=-6",
+            "pts": [
+              [
+                287.13267,
+                278.487689
+              ],
+              [
+                286.827852,
+                213.711072
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:mid:x=-6",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:hi:x=-6",
+            "pts": [
+              [
+                286.827852,
+                213.711072
+              ],
+              [
+                286.616259,
+                168.745646
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=-6",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:lo:x=-3",
+            "pts": [
+              [
+                434.93731,
+                334.609598
+              ],
+              [
+                434.876029,
+                278.948423
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:lo:x=-3",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:mid:x=-3",
+            "pts": [
+              [
+                434.876029,
+                278.948423
+              ],
+              [
+                434.80339,
+                212.971543
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:mid:x=-3",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:hi:x=-3",
+            "pts": [
+              [
+                434.80339,
+                212.971543
+              ],
+              [
+                434.752965,
+                167.17067
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=-3",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:lo:x=0",
+            "pts": [
+              [
+                588.042579,
+                336.135369
+              ],
+              [
+                588.192278,
+                279.426537
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:lo:x=0",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:mid:x=0",
+            "pts": [
+              [
+                588.192278,
+                279.426537
+              ],
+              [
+                588.369732,
+                212.204073
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:mid:x=0",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:hi:x=0",
+            "pts": [
+              [
+                588.369732,
+                212.204073
+              ],
+              [
+                588.492926,
+                165.536122
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=0",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:lo:x=3",
+            "pts": [
+              [
+                747.025701,
+                337.719716
+              ],
+              [
+                747.402794,
+                279.923032
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:lo:x=3",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:mid:x=3",
+            "pts": [
+              [
+                747.402794,
+                279.923032
+              ],
+              [
+                747.849824,
+                211.407049
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:mid:x=3",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:hi:x=3",
+            "pts": [
+              [
+                747.849824,
+                211.407049
+              ],
+              [
+                748.160183,
+                163.838554
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=3",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:lo:x=6",
+            "pts": [
+              [
+                912.231788,
+                339.366078
+              ],
+              [
+                912.854147,
+                280.438988
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:lo:x=6",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:mid:x=6",
+            "pts": [
+              [
+                912.854147,
+                280.438988
+              ],
+              [
+                913.591977,
+                210.578729
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:mid:x=6",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:hi:x=6",
+            "pts": [
+              [
+                913.591977,
+                210.578729
+              ],
+              [
+                914.104258,
+                162.074253
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=6",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facH:y=0",
+            "pts": [
+              [
+                287.389843,
+                333.139213
+              ],
+              [
+                912.231788,
+                339.366078
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=0",
+            "kind": "groundWall"
+          },
+          {
+            "id": "d:facH:y=1.1",
+            "pts": [
+              [
+                287.13267,
+                278.487689
+              ],
+              [
+                912.854147,
+                280.438988
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=1.1",
+            "kind": "facadeH"
+          },
+          {
+            "id": "d:facH:y=2.4",
+            "pts": [
+              [
+                286.827852,
+                213.711072
+              ],
+              [
+                913.591977,
+                210.578729
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=2.4",
+            "kind": "facadeH"
+          },
+          {
+            "id": "d:facH:y=3.3",
+            "pts": [
+              [
+                286.616259,
+                168.745646
+              ],
+              [
+                914.104258,
+                162.074253
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=3.3",
+            "kind": "facadeH"
+          },
+          {
+            "id": "d:eave:front:under",
+            "pts": [
+              [
+                261.470775,
+                164.256685
+              ],
+              [
+                946.768268,
+                156.560965
+              ]
+            ],
+            "family": "X",
+            "srcTag": "eave:front:under",
+            "kind": "eave"
+          },
+          {
+            "id": "d:eave:front:top",
+            "pts": [
+              [
+                261.386732,
+                148.450181
+              ],
+              [
+                946.963248,
+                139.389128
+              ]
+            ],
+            "family": "X",
+            "srcTag": "eave:front:top",
+            "kind": "eave"
+          },
+          {
+            "id": "d:eave:right:under",
+            "pts": [
+              [
+                911.691707,
+                165.413811
+              ],
+              [
+                946.768268,
+                156.560965
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "eave:right:under",
+            "kind": "eave"
+          },
+          {
+            "id": "d:eave:right:top",
+            "pts": [
+              [
+                911.855578,
+                149.812546
+              ],
+              [
+                946.963248,
+                139.389128
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "eave:right:top",
+            "kind": "eave"
+          },
+          {
+            "id": "d:fascia:under",
+            "pts": [
+              [
+                261.540762,
+                177.419491
+              ],
+              [
+                946.605908,
+                170.859879
+              ]
+            ],
+            "family": "X",
+            "srcTag": "fascia:under",
+            "kind": "fascia"
+          },
+          {
+            "id": "d:fascia:top",
+            "pts": [
+              [
+                261.470775,
+                164.256685
+              ],
+              [
+                946.768268,
+                156.560965
+              ]
+            ],
+            "family": "X",
+            "srcTag": "fascia:top",
+            "kind": "fascia"
+          },
+          {
+            "id": "d:fascia:right",
+            "pts": [
+              [
+                944.752972,
+                171.258792
+              ],
+              [
+                946.605908,
+                170.859879
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "fascia:right",
+            "kind": "fascia"
+          },
+          {
+            "id": "d:sign:bot",
+            "pts": [
+              [
+                505.331324,
+                207.142178
+              ],
+              [
+                673.53934,
+                206.18918
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:bot",
+            "kind": "sign"
+          },
+          {
+            "id": "d:sign:top",
+            "pts": [
+              [
+                505.353023,
+                171.972504
+              ],
+              [
+                673.708529,
+                170.296568
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:top",
+            "kind": "sign"
+          },
+          {
+            "id": "d:sign:left",
+            "pts": [
+              [
+                505.331324,
+                207.142178
+              ],
+              [
+                505.353023,
+                171.972504
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "sign:left",
+            "kind": "sign"
+          },
+          {
+            "id": "d:sign:topR",
+            "pts": [
+              [
+                673.53934,
+                206.18918
+              ],
+              [
+                673.708529,
+                170.296568
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "sign:topR",
+            "kind": "sign"
+          },
+          {
+            "id": "d:sign:glyph:1",
+            "pts": [
+              [
+                532.221912,
+                192.468088
+              ],
+              [
+                561.369204,
+                192.251499
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:glyph:1",
+            "kind": "sign"
+          },
+          {
+            "id": "d:sign:glyph:2",
+            "pts": [
+              [
+                573.924225,
+                192.158205
+              ],
+              [
+                603.368305,
+                191.939411
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:glyph:2",
+            "kind": "sign"
+          },
+          {
+            "id": "d:sign:glyph:3",
+            "pts": [
+              [
+                616.051491,
+                191.845165
+              ],
+              [
+                645.796917,
+                191.624132
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:glyph:3",
+            "kind": "sign"
+          },
+          {
+            "id": "d:side:ground",
+            "pts": [
+              [
+                912.231788,
+                339.366078
+              ],
+              [
+                960,
+                351.07376
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "side:ground",
+            "kind": "groundWall"
+          },
+          {
+            "id": "d:side:eaveunder",
+            "pts": [
+              [
+                914.104258,
+                162.074253
+              ],
+              [
+                960,
+                150.134565
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "side:eaveunder",
+            "kind": "facadeH"
+          },
+          {
+            "id": "d:side:eavetop",
+            "pts": [
+              [
+                914.275288,
+                145.880614
+              ],
+              [
+                960,
+                131.887557
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "side:eavetop",
+            "kind": "eave"
+          },
+          {
+            "id": "d:ground:z=3",
+            "pts": [
+              [
+                226.678507,
+                350.705769
+              ],
+              [
+                960,
+                359.696009
+              ]
+            ],
+            "family": "X",
+            "srcTag": "ground:z=3",
+            "kind": "groundLine"
+          },
+          {
+            "id": "d:ground:z=6",
+            "pts": [
+              [
+                131.550331,
+                378.230685
+              ],
+              [
+                960,
+                391.424431
+              ]
+            ],
+            "family": "X",
+            "srcTag": "ground:z=6",
+            "kind": "groundLine"
+          },
+          {
+            "id": "d:ground:z=9",
+            "pts": [
+              [
+                0,
+                428.414023
+              ],
+              [
+                960,
+                450.225484
+              ]
+            ],
+            "family": "X",
+            "srcTag": "ground:z=9",
+            "kind": "groundLine"
+          },
+          {
+            "id": "d:ground:x=-3",
+            "pts": [
+              [
+                430.902793,
+                337.176023
+              ],
+              [
+                112.055857,
+                540
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "ground:x=-3",
+            "kind": "groundLine"
+          },
+          {
+            "id": "d:ground:x=0",
+            "pts": [
+              [
+                588.874244,
+                338.800967
+              ],
+              [
+                651.648275,
+                540
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "ground:x=0",
+            "kind": "groundLine"
+          },
+          {
+            "id": "d:ground:x=3",
+            "pts": [
+              [
+                753.110112,
+                340.490348
+              ],
+              [
+                960,
+                434.700913
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "ground:x=3",
+            "kind": "groundLine"
+          }
+        ],
+        "signObserved": {
+          "total": 325,
+          "visible": 275,
+          "fraction": 0.846154,
+          "occlusionBoundaryY": 3.1092
+        }
+      },
+      {
+        "id": "B'",
+        "name": "街景机位B' · 仅移动第二机位的复演",
+        "desc": "只移动第二机位（更靠近、稍抬俯仰），店招不再藏在檐后；机位 A 与其锚点保持不变。",
+        "image": {
+          "W": 960,
+          "H": 540,
+          "cx": 480,
+          "cy": 270
+        },
+        "knownPoint": {
+          "px": [
+            690.62,
+            658.0688
+          ],
+          "world": [
+            0,
+            0,
+            3
+          ]
+        },
+        "anchors": [
+          {
+            "world": [
+              -3,
+              0,
+              0
+            ],
+            "px": [
+              242.9528,
+              448.4633
+            ]
+          },
+          {
+            "world": [
+              3,
+              0,
+              0
+            ],
+            "px": [
+              1053.4399,
+              469.1939
+            ]
+          }
+        ],
+        "observedLines": [
+          {
+            "id": "f2:0",
+            "pts": [
+              [
+                241.580216,
+                449.641844
+              ],
+              [
+                239.521602,
+                308.913225
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:lo:x=-3",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f2:1",
+            "pts": [
+              [
+                241.080451,
+                308.518489
+              ],
+              [
+                240.134284,
+                142.764466
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:mid:x=-3",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f2:2",
+            "pts": [
+              [
+                240.262141,
+                142.466461
+              ],
+              [
+                239.234191,
+                31.62208
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=-3",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f2:3",
+            "pts": [
+              [
+                627.577619,
+                456.924115
+              ],
+              [
+                630.655562,
+                312.04422
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:lo:x=0",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f2:4",
+            "pts": [
+              [
+                630.528031,
+                312.560064
+              ],
+              [
+                630.498423,
+                138.377868
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:mid:x=0",
+            "kind": "facadeV",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f2:5",
+            "pts": [
+              [
+                629.868569,
+                138.68893
+              ],
+              [
+                629.197447,
+                123.239807
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=0",
+            "kind": "facadeV",
+            "occluded": true,
+            "fragCount": 2
+          },
+          {
+            "id": "f2:6",
+            "pts": [
+              [
+                632.480938,
+                26.52511
+              ],
+              [
+                631.753875,
+                19.571118
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=0",
+            "kind": "facadeV",
+            "occluded": true,
+            "fragCount": 2
+          },
+          {
+            "id": "f2:7",
+            "pts": [
+              [
+                0,
+                441.093011
+              ],
+              [
+                960,
+                466.409195
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=0",
+            "kind": "groundWall",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f2:8",
+            "pts": [
+              [
+                0,
+                308.087398
+              ],
+              [
+                960,
+                314.90271
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=1.1",
+            "kind": "facadeH",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f2:9",
+            "pts": [
+              [
+                0,
+                145.967268
+              ],
+              [
+                960,
+                134.298562
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=2.4",
+            "kind": "facadeH",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f2:10",
+            "pts": [
+              [
+                0,
+                35.566517
+              ],
+              [
+                960,
+                10.704675
+              ]
+            ],
+            "family": "X",
+            "srcTag": "fascia:under",
+            "kind": "fascia",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f2:11",
+            "pts": [
+              [
+                416.348736,
+                124.886604
+              ],
+              [
+                862.774981,
+                119.748876
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:bot",
+            "kind": "sign",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f2:12",
+            "pts": [
+              [
+                415.519686,
+                33.105233
+              ],
+              [
+                862.368511,
+                20.078169
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:top",
+            "kind": "sign",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f2:13",
+            "pts": [
+              [
+                415.466003,
+                124.60411
+              ],
+              [
+                415.323429,
+                32.602453
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "sign:left",
+            "kind": "sign",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f2:14",
+            "pts": [
+              [
+                860.884035,
+                117.854249
+              ],
+              [
+                862.216218,
+                21.961598
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "sign:topR",
+            "kind": "sign",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f2:15",
+            "pts": [
+              [
+                483.24901,
+                86.756035
+              ],
+              [
+                561.222907,
+                84.49462
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:glyph:1",
+            "kind": "sign",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f2:16",
+            "pts": [
+              [
+                593.305161,
+                81.845629
+              ],
+              [
+                672.269538,
+                81.34267
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:glyph:2",
+            "kind": "sign",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f2:17",
+            "pts": [
+              [
+                706.07209,
+                81.470192
+              ],
+              [
+                785.727655,
+                80.639701
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:glyph:3",
+            "kind": "sign",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f2:18",
+            "pts": [
+              [
+                215.869364,
+                466.674915
+              ],
+              [
+                100.552702,
+                540
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "ground:x=-3",
+            "kind": "groundLine",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "f2:19",
+            "pts": [
+              [
+                634.167026,
+                477.448301
+              ],
+              [
+                653.612515,
+                540
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "ground:x=0",
+            "kind": "groundLine",
+            "occluded": false,
+            "fragCount": 1
+          }
+        ],
+        "directLines": [
+          {
+            "id": "d:facV:lo:x=-3",
+            "pts": [
+              [
+                242.952778,
+                448.46327
+              ],
+              [
+                241.736525,
+                309.177798
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:lo:x=-3",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:mid:x=-3",
+            "pts": [
+              [
+                241.736525,
+                309.177798
+              ],
+              [
+                240.282945,
+                142.713711
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:mid:x=-3",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:hi:x=-3",
+            "pts": [
+              [
+                240.282945,
+                142.713711
+              ],
+              [
+                239.266187,
+                26.27448
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=-3",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:lo:x=0",
+            "pts": [
+              [
+                628.516067,
+                458.325195
+              ],
+              [
+                629.315286,
+                312.292132
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:lo:x=0",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:mid:x=0",
+            "pts": [
+              [
+                629.315286,
+                312.292132
+              ],
+              [
+                630.270979,
+                137.66829
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:mid:x=0",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facV:hi:x=0",
+            "pts": [
+              [
+                630.270979,
+                137.66829
+              ],
+              [
+                630.93981,
+                15.459561
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "facV:hi:x=0",
+            "kind": "facadeV"
+          },
+          {
+            "id": "d:facH:y=0",
+            "pts": [
+              [
+                0,
+                442.249032
+              ],
+              [
+                960,
+                466.80388
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=0",
+            "kind": "groundWall"
+          },
+          {
+            "id": "d:facH:y=1.1",
+            "pts": [
+              [
+                0,
+                307.235358
+              ],
+              [
+                960,
+                314.949301
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=1.1",
+            "kind": "facadeH"
+          },
+          {
+            "id": "d:facH:y=2.4",
+            "pts": [
+              [
+                0,
+                145.822342
+              ],
+              [
+                960,
+                133.402462
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=2.4",
+            "kind": "facadeH"
+          },
+          {
+            "id": "d:facH:y=3.3",
+            "pts": [
+              [
+                0,
+                32.881113
+              ],
+              [
+                960,
+                6.37353
+              ]
+            ],
+            "family": "X",
+            "srcTag": "facH:y=3.3",
+            "kind": "facadeH"
+          },
+          {
+            "id": "d:fascia:under",
+            "pts": [
+              [
+                0,
+                35.354534
+              ],
+              [
+                960,
+                9.155472
+              ]
+            ],
+            "family": "X",
+            "srcTag": "fascia:under",
+            "kind": "fascia"
+          },
+          {
+            "id": "d:sign:bot",
+            "pts": [
+              [
+                414.782137,
+                124.94051
+              ],
+              [
+                860.549557,
+                118.320746
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:bot",
+            "kind": "sign"
+          },
+          {
+            "id": "d:sign:top",
+            "pts": [
+              [
+                414.564396,
+                33.226251
+              ],
+              [
+                861.890163,
+                21.525013
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:top",
+            "kind": "sign"
+          },
+          {
+            "id": "d:sign:left",
+            "pts": [
+              [
+                414.782137,
+                124.94051
+              ],
+              [
+                414.564396,
+                33.226251
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "sign:left",
+            "kind": "sign"
+          },
+          {
+            "id": "d:sign:topR",
+            "pts": [
+              [
+                860.549557,
+                118.320746
+              ],
+              [
+                861.890163,
+                21.525013
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "sign:topR",
+            "kind": "sign"
+          },
+          {
+            "id": "d:sign:glyph:1",
+            "pts": [
+              [
+                484.037559,
+                85.8978
+              ],
+              [
+                560.055055,
+                84.415666
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:glyph:1",
+            "kind": "sign"
+          },
+          {
+            "id": "d:sign:glyph:2",
+            "pts": [
+              [
+                593.068204,
+                83.772
+              ],
+              [
+                671.135247,
+                82.249905
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:glyph:2",
+            "kind": "sign"
+          },
+          {
+            "id": "d:sign:glyph:3",
+            "pts": [
+              [
+                705.044505,
+                81.588767
+              ],
+              [
+                785.245114,
+                80.025074
+              ]
+            ],
+            "family": "X",
+            "srcTag": "sign:glyph:3",
+            "kind": "sign"
+          }
+        ],
+        "signObserved": {
+          "total": 325,
+          "visible": 325,
+          "fraction": 1,
+          "occlusionBoundaryY": 3.18
+        }
+      }
+    ],
+    "priors": {
+      "cameraHeight": 1.6
+    }
+  }
+}

@@ -1,0 +1,328 @@
+{
+  "builtAt": "2026-11-24T12:43:33.685Z",
+  "packVersion": 1,
+  "packs": [
+    "assets/packs/street-facade.pack.json",
+    "assets/packs/ambiguity-indoor.pack.json",
+    "assets/packs/line-samples.pack.json"
+  ],
+  "results": [
+    {
+      "pack": "street-facade",
+      "focalCandidates": [
+        {
+          "shot": "A",
+          "nAssigned": 23,
+          "lineVpRms": 0.0184,
+          "candidates": [
+            {
+              "pair": "XY",
+              "f": 602.32,
+              "reason": null,
+              "hasCamera": true
+            },
+            {
+              "pair": "XZ",
+              "f": 775.53,
+              "reason": null,
+              "hasCamera": true
+            },
+            {
+              "pair": "YZ",
+              "f": 879.4,
+              "reason": null,
+              "hasCamera": true
+            }
+          ]
+        },
+        {
+          "shot": "B",
+          "nAssigned": 39,
+          "lineVpRms": 0.0687,
+          "candidates": [
+            {
+              "pair": "XY",
+              "f": 4394.48,
+              "reason": null,
+              "hasCamera": true
+            },
+            {
+              "pair": "XZ",
+              "f": null,
+              "reason": "f²≤0 或灭点近无穷远：该灭点对数值病态",
+              "hasCamera": false
+            },
+            {
+              "pair": "YZ",
+              "f": 893.15,
+              "reason": null,
+              "hasCamera": true
+            }
+          ]
+        },
+        {
+          "shot": "B'",
+          "nAssigned": 20,
+          "lineVpRms": 0.0243,
+          "candidates": [
+            {
+              "pair": "XY",
+              "f": null,
+              "reason": "f²≤0 或灭点近无穷远：该灭点对数值病态",
+              "hasCamera": false
+            },
+            {
+              "pair": "XZ",
+              "f": 838.74,
+              "reason": null,
+              "hasCamera": true
+            },
+            {
+              "pair": "YZ",
+              "f": null,
+              "reason": "f²≤0 或灭点近无穷远：该灭点对数值病态",
+              "hasCamera": false
+            }
+          ]
+        }
+      ],
+      "occlusionSelection": {
+        "comboCount": 6,
+        "selectedPair": [
+          "YZ",
+          "YZ"
+        ],
+        "selectedF": [
+          879.4,
+          893.15
+        ],
+        "occErrors": 0,
+        "boundaryErr": 0.00567,
+        "reprRms": 87.329,
+        "obsBoundaries": [
+          3.18,
+          3.1092
+        ]
+      },
+      "replay": {
+        "movedOnly": "second camera",
+        "flipped": true,
+        "fixedAnchorShot": "A",
+        "anchorUnchanged": true,
+        "anchorPx": [
+          [
+            -918.034,
+            650.276
+          ],
+          [
+            458.783,
+            535.08
+          ],
+          [
+            -879.149,
+            -120.324
+          ],
+          [
+            459.185,
+            11.516
+          ]
+        ],
+        "states": {
+          "B": {
+            "hidden": true,
+            "fraction": 0.8462
+          },
+          "B'": {
+            "hidden": false,
+            "fraction": 1
+          }
+        },
+        "predictedBoundary": {
+          "B": 3.1148,
+          "B'": 3.18
+        }
+      },
+      "lineSource": [
+        {
+          "shot": "A",
+          "phantomPx": 171.01,
+          "phantomRatio": 0.1169,
+          "directRegionPx": 1463.31,
+          "extractedRegionPx": 1311.28
+        },
+        {
+          "shot": "B",
+          "phantomPx": 216.18,
+          "phantomRatio": 0.0643,
+          "directRegionPx": 3359.9,
+          "extractedRegionPx": 3150.25
+        },
+        {
+          "shot": "B'",
+          "phantomPx": 1.93,
+          "phantomRatio": 0.0008,
+          "directRegionPx": 2276.5,
+          "extractedRegionPx": 2278.35
+        }
+      ]
+    },
+    {
+      "pack": "ambiguity-indoor",
+      "focalPair": {
+        "fA": 760,
+        "fB": 945.78
+      },
+      "backWallAgreement": {
+        "n": 18,
+        "mean": 4.181983174450556e-14,
+        "max": 8.038873388460929e-14
+      },
+      "sideWallSeparation": {
+        "n": 14,
+        "mean": 67.0549,
+        "max": 91.44
+      },
+      "stages": [
+        {
+          "shot": "A",
+          "trueF": 760,
+          "candidateF": 945.78,
+          "stage1": {
+            "correctRms": 0.8142,
+            "wrongRms": 0.8142,
+            "gap": 0
+          },
+          "stage2": {
+            "correctRms": 0.7769,
+            "wrongRms": 24.2716,
+            "correctSideRms": 0.752,
+            "wrongSideRms": 31.103
+          },
+          "resolvedBySide": true
+        },
+        {
+          "shot": "B",
+          "trueF": 945.78,
+          "candidateF": 760,
+          "stage1": {
+            "correctRms": 0.8142,
+            "wrongRms": 0.8142,
+            "gap": 0
+          },
+          "stage2": {
+            "correctRms": 0.7769,
+            "wrongRms": 23.9826,
+            "correctSideRms": 0.752,
+            "wrongSideRms": 30.7325
+          },
+          "resolvedBySide": true
+        }
+      ]
+    },
+    {
+      "pack": "line-samples",
+      "verifications": [
+        {
+          "id": "sample-few",
+          "pass": true,
+          "reproducible": true,
+          "rebuildMaxDeltaPx": 0,
+          "projectionRmsPx": 0.721,
+          "vpDirections": [
+            {
+              "family": "X",
+              "n": 2,
+              "angleDeg": 0.413,
+              "pass": true,
+              "infinite": false,
+              "reason": null
+            },
+            {
+              "family": "Y",
+              "n": 2,
+              "angleDeg": 0.25,
+              "pass": true,
+              "infinite": true,
+              "reason": null
+            },
+            {
+              "family": "Z",
+              "n": 2,
+              "angleDeg": 0.076,
+              "pass": true,
+              "infinite": false,
+              "reason": null
+            }
+          ],
+          "projectionPerFamily": [
+            {
+              "family": "X",
+              "rmsPx": 0.737,
+              "n": 4
+            },
+            {
+              "family": "Y",
+              "rmsPx": 0.819,
+              "n": 4
+            },
+            {
+              "family": "Z",
+              "rmsPx": 0.59,
+              "n": 4
+            }
+          ]
+        },
+        {
+          "id": "sample-wide",
+          "pass": true,
+          "reproducible": true,
+          "rebuildMaxDeltaPx": 0,
+          "projectionRmsPx": 0.857,
+          "vpDirections": [
+            {
+              "family": "X",
+              "n": 3,
+              "angleDeg": 0.1268,
+              "pass": true,
+              "infinite": false,
+              "reason": null
+            },
+            {
+              "family": "Y",
+              "n": 3,
+              "angleDeg": 0.0136,
+              "pass": true,
+              "infinite": false,
+              "reason": null
+            },
+            {
+              "family": "Z",
+              "n": 4,
+              "angleDeg": 0.1226,
+              "pass": true,
+              "infinite": false,
+              "reason": null
+            }
+          ],
+          "projectionPerFamily": [
+            {
+              "family": "X",
+              "rmsPx": 1.183,
+              "n": 6
+            },
+            {
+              "family": "Y",
+              "rmsPx": 0.585,
+              "n": 6
+            },
+            {
+              "family": "Z",
+              "rmsPx": 0.729,
+              "n": 8
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

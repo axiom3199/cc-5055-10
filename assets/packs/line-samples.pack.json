@@ -1,0 +1,846 @@
+{
+  "packVersion": 1,
+  "kind": "line-samples",
+  "createdAt": "2026-11-24T12:43:33.678Z",
+  "generator": "tools/build-packs.cjs::buildSamplesPack",
+  "provenance": {
+    "generator": "tools/build-packs.cjs::buildSamplesPack",
+    "sourceModules": [
+      "js/samples.js"
+    ],
+    "params": {
+      "image": {
+        "W": 960,
+        "H": 540,
+        "CX": 480,
+        "CY": 270
+      },
+      "few": {
+        "id": "sample-few",
+        "kind": "few-line-group",
+        "title": "少线组 · 纹理不足室内角",
+        "seed": 101,
+        "noiseSigma": 0.8,
+        "cam": {
+          "f": 880,
+          "C": [
+            0.4,
+            1.55,
+            1
+          ],
+          "yaw": -0.18,
+          "pitch": 0.05,
+          "roll": 0
+        },
+        "linesPerFamily": {
+          "X": 3,
+          "Y": 3,
+          "Z": 2
+        },
+        "box": {
+          "x0": -1.8,
+          "x1": 1.8,
+          "y0": 0.2,
+          "y1": 2.7,
+          "z0": -6,
+          "z1": -1.4
+        }
+      },
+      "wide": {
+        "id": "sample-wide",
+        "kind": "wide-view",
+        "title": "宽视角 · 短焦大滚转，纵深族受遮挡",
+        "seed": 202,
+        "noiseSigma": 0.9,
+        "cam": {
+          "f": 520,
+          "C": [
+            -0.3,
+            1.5,
+            0.8
+          ],
+          "yaw": 0.22,
+          "pitch": -0.28,
+          "roll": 0.12
+        },
+        "linesPerFamily": {
+          "X": 5,
+          "Y": 5,
+          "Z": 4
+        },
+        "box": {
+          "x0": -3,
+          "x1": 3,
+          "y0": 0,
+          "y1": 3,
+          "z0": -6,
+          "z1": -0.5
+        },
+        "occludeZ": {
+          "atZ": -3,
+          "halfDepth": 0.28
+        }
+      }
+    },
+    "truth": {
+      "cameras": [
+        {
+          "id": "sample-few",
+          "cam": {
+            "cx": 480,
+            "cy": 270,
+            "k1": 0,
+            "f": 880,
+            "C": [
+              0.4,
+              1.55,
+              1
+            ],
+            "yaw": -0.18,
+            "pitch": 0.05,
+            "roll": 0
+          }
+        },
+        {
+          "id": "sample-wide",
+          "cam": {
+            "cx": 480,
+            "cy": 270,
+            "k1": 0,
+            "f": 520,
+            "C": [
+              -0.3,
+              1.5,
+              0.8
+            ],
+            "yaw": 0.22,
+            "pitch": -0.28,
+            "roll": 0.12
+          }
+        }
+      ]
+    }
+  },
+  "content": {
+    "params": {
+      "image": {
+        "W": 960,
+        "H": 540,
+        "CX": 480,
+        "CY": 270
+      },
+      "few": {
+        "id": "sample-few",
+        "kind": "few-line-group",
+        "title": "少线组 · 纹理不足室内角",
+        "seed": 101,
+        "noiseSigma": 0.8,
+        "cam": {
+          "f": 880,
+          "C": [
+            0.4,
+            1.55,
+            1
+          ],
+          "yaw": -0.18,
+          "pitch": 0.05,
+          "roll": 0
+        },
+        "linesPerFamily": {
+          "X": 3,
+          "Y": 3,
+          "Z": 2
+        },
+        "box": {
+          "x0": -1.8,
+          "x1": 1.8,
+          "y0": 0.2,
+          "y1": 2.7,
+          "z0": -6,
+          "z1": -1.4
+        }
+      },
+      "wide": {
+        "id": "sample-wide",
+        "kind": "wide-view",
+        "title": "宽视角 · 短焦大滚转，纵深族受遮挡",
+        "seed": 202,
+        "noiseSigma": 0.9,
+        "cam": {
+          "f": 520,
+          "C": [
+            -0.3,
+            1.5,
+            0.8
+          ],
+          "yaw": 0.22,
+          "pitch": -0.28,
+          "roll": 0.12
+        },
+        "linesPerFamily": {
+          "X": 5,
+          "Y": 5,
+          "Z": 4
+        },
+        "box": {
+          "x0": -3,
+          "x1": 3,
+          "y0": 0,
+          "y1": 3,
+          "z0": -6,
+          "z1": -0.5
+        },
+        "occludeZ": {
+          "atZ": -3,
+          "halfDepth": 0.28
+        }
+      }
+    },
+    "shots": [
+      {
+        "id": "sample-few",
+        "kind": "few-line-group",
+        "title": "少线组 · 纹理不足室内角",
+        "image": {
+          "W": 960,
+          "H": 540,
+          "cx": 480,
+          "cy": 270
+        },
+        "observedLines": [
+          {
+            "id": "sample-few:0",
+            "pts": [
+              [
+                0,
+                354
+              ],
+              [
+                801.1,
+                348.6
+              ]
+            ],
+            "family": "X",
+            "srcTag": "X:back:1",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "sample-few:1",
+            "pts": [
+              [
+                0,
+                107
+              ],
+              [
+                796.4,
+                137.3
+              ]
+            ],
+            "family": "X",
+            "srcTag": "X:back:2",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "sample-few:2",
+            "pts": [
+              [
+                160,
+                540
+              ],
+              [
+                169.8,
+                0
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "Y:back:1",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "sample-few:3",
+            "pts": [
+              [
+                504,
+                540
+              ],
+              [
+                502.3,
+                0
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "Y:back:2",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "sample-few:4",
+            "pts": [
+              [
+                13,
+                379
+              ],
+              [
+                0,
+                381.8
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "Z:side:0",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "sample-few:5",
+            "pts": [
+              [
+                495,
+                374
+              ],
+              [
+                802,
+                476.7
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "Z:side:1",
+            "occluded": false,
+            "fragCount": 1
+          }
+        ],
+        "worldLines": [
+          {
+            "tag": "X:back:0",
+            "p1": [
+              -1.8,
+              0.825,
+              -1.4
+            ],
+            "p2": [
+              1.8,
+              0.825,
+              -1.4
+            ],
+            "family": "X",
+            "occlude": null
+          },
+          {
+            "tag": "X:back:1",
+            "p1": [
+              -1.8,
+              1.45,
+              -1.4
+            ],
+            "p2": [
+              1.8,
+              1.45,
+              -1.4
+            ],
+            "family": "X",
+            "occlude": null
+          },
+          {
+            "tag": "X:back:2",
+            "p1": [
+              -1.8,
+              2.075,
+              -1.4
+            ],
+            "p2": [
+              1.8,
+              2.075,
+              -1.4
+            ],
+            "family": "X",
+            "occlude": null
+          },
+          {
+            "tag": "Y:back:0",
+            "p1": [
+              -0.9,
+              0.2,
+              -1.4
+            ],
+            "p2": [
+              -0.9,
+              2.7,
+              -1.4
+            ],
+            "family": "Y",
+            "occlude": null
+          },
+          {
+            "tag": "Y:back:1",
+            "p1": [
+              0,
+              0.2,
+              -1.4
+            ],
+            "p2": [
+              0,
+              2.7,
+              -1.4
+            ],
+            "family": "Y",
+            "occlude": null
+          },
+          {
+            "tag": "Y:back:2",
+            "p1": [
+              0.9,
+              0.2,
+              -1.4
+            ],
+            "p2": [
+              0.9,
+              2.7,
+              -1.4
+            ],
+            "family": "Y",
+            "occlude": null
+          },
+          {
+            "tag": "Z:side:0",
+            "p1": [
+              -1.8,
+              1.075,
+              -6
+            ],
+            "p2": [
+              -1.8,
+              1.075,
+              -1.4
+            ],
+            "family": "Z",
+            "occlude": null
+          },
+          {
+            "tag": "Z:side:1",
+            "p1": [
+              1.8,
+              1.075,
+              -6
+            ],
+            "p2": [
+              1.8,
+              1.075,
+              -1.4
+            ],
+            "family": "Z",
+            "occlude": null
+          }
+        ]
+      },
+      {
+        "id": "sample-wide",
+        "kind": "wide-view",
+        "title": "宽视角 · 短焦大滚转，纵深族受遮挡",
+        "image": {
+          "W": 960,
+          "H": 540,
+          "cx": 480,
+          "cy": 270
+        },
+        "observedLines": [
+          {
+            "id": "sample-wide:0",
+            "pts": [
+              [
+                0,
+                342
+              ],
+              [
+                735,
+                540
+              ]
+            ],
+            "family": "X",
+            "srcTag": "X:back:0",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "sample-wide:1",
+            "pts": [
+              [
+                0,
+                214
+              ],
+              [
+                960,
+                407.4
+              ]
+            ],
+            "family": "X",
+            "srcTag": "X:back:1",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "sample-wide:2",
+            "pts": [
+              [
+                0,
+                62
+              ],
+              [
+                960,
+                177.2
+              ]
+            ],
+            "family": "X",
+            "srcTag": "X:back:2",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "sample-wide:3",
+            "pts": [
+              [
+                92,
+                485
+              ],
+              [
+                39.3,
+                0
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "Y:back:0",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "sample-wide:4",
+            "pts": [
+              [
+                329,
+                540
+              ],
+              [
+                351.6,
+                0
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "Y:back:1",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "sample-wide:5",
+            "pts": [
+              [
+                656,
+                540
+              ],
+              [
+                794.7,
+                0
+              ]
+            ],
+            "family": "Y",
+            "srcTag": "Y:back:2",
+            "occluded": false,
+            "fragCount": 1
+          },
+          {
+            "id": "sample-wide:6",
+            "pts": [
+              [
+                410,
+                146
+              ],
+              [
+                292.8,
+                151.3
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "Z:side:0",
+            "occluded": true,
+            "fragCount": 2
+          },
+          {
+            "id": "sample-wide:7",
+            "pts": [
+              [
+                248,
+                154
+              ],
+              [
+                0,
+                163.9
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "Z:side:0",
+            "occluded": true,
+            "fragCount": 2
+          },
+          {
+            "id": "sample-wide:8",
+            "pts": [
+              [
+                912,
+                213
+              ],
+              [
+                960,
+                225.8
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "Z:side:1",
+            "occluded": true,
+            "fragCount": 2
+          },
+          {
+            "id": "sample-wide:9",
+            "pts": [
+              [
+                419,
+                14
+              ],
+              [
+                396.2,
+                0
+              ]
+            ],
+            "family": "Z",
+            "srcTag": "Z:side:2",
+            "occluded": true,
+            "fragCount": 2
+          }
+        ],
+        "worldLines": [
+          {
+            "tag": "X:back:0",
+            "p1": [
+              -3,
+              0.5,
+              -0.5
+            ],
+            "p2": [
+              3,
+              0.5,
+              -0.5
+            ],
+            "family": "X",
+            "occlude": null
+          },
+          {
+            "tag": "X:back:1",
+            "p1": [
+              -3,
+              1,
+              -0.5
+            ],
+            "p2": [
+              3,
+              1,
+              -0.5
+            ],
+            "family": "X",
+            "occlude": null
+          },
+          {
+            "tag": "X:back:2",
+            "p1": [
+              -3,
+              1.5,
+              -0.5
+            ],
+            "p2": [
+              3,
+              1.5,
+              -0.5
+            ],
+            "family": "X",
+            "occlude": null
+          },
+          {
+            "tag": "X:back:3",
+            "p1": [
+              -3,
+              2,
+              -0.5
+            ],
+            "p2": [
+              3,
+              2,
+              -0.5
+            ],
+            "family": "X",
+            "occlude": null
+          },
+          {
+            "tag": "X:back:4",
+            "p1": [
+              -3,
+              2.5,
+              -0.5
+            ],
+            "p2": [
+              3,
+              2.5,
+              -0.5
+            ],
+            "family": "X",
+            "occlude": null
+          },
+          {
+            "tag": "Y:back:0",
+            "p1": [
+              -2,
+              0,
+              -0.5
+            ],
+            "p2": [
+              -2,
+              3,
+              -0.5
+            ],
+            "family": "Y",
+            "occlude": null
+          },
+          {
+            "tag": "Y:back:1",
+            "p1": [
+              -1,
+              0,
+              -0.5
+            ],
+            "p2": [
+              -1,
+              3,
+              -0.5
+            ],
+            "family": "Y",
+            "occlude": null
+          },
+          {
+            "tag": "Y:back:2",
+            "p1": [
+              0,
+              0,
+              -0.5
+            ],
+            "p2": [
+              0,
+              3,
+              -0.5
+            ],
+            "family": "Y",
+            "occlude": null
+          },
+          {
+            "tag": "Y:back:3",
+            "p1": [
+              1,
+              0,
+              -0.5
+            ],
+            "p2": [
+              1,
+              3,
+              -0.5
+            ],
+            "family": "Y",
+            "occlude": null
+          },
+          {
+            "tag": "Y:back:4",
+            "p1": [
+              2,
+              0,
+              -0.5
+            ],
+            "p2": [
+              2,
+              3,
+              -0.5
+            ],
+            "family": "Y",
+            "occlude": null
+          },
+          {
+            "tag": "Z:side:0",
+            "p1": [
+              -3,
+              1.05,
+              -6
+            ],
+            "p2": [
+              -3,
+              1.05,
+              -0.5
+            ],
+            "family": "Z",
+            "occlude": {
+              "atZ": -3,
+              "halfDepth": 0.28
+            }
+          },
+          {
+            "tag": "Z:side:1",
+            "p1": [
+              3,
+              1.05,
+              -6
+            ],
+            "p2": [
+              3,
+              1.05,
+              -0.5
+            ],
+            "family": "Z",
+            "occlude": {
+              "atZ": -3,
+              "halfDepth": 0.28
+            }
+          },
+          {
+            "tag": "Z:side:2",
+            "p1": [
+              -3,
+              2.7,
+              -6
+            ],
+            "p2": [
+              -3,
+              2.7,
+              -0.5
+            ],
+            "family": "Z",
+            "occlude": {
+              "atZ": -3,
+              "halfDepth": 0.28
+            }
+          },
+          {
+            "tag": "Z:side:3",
+            "p1": [
+              3,
+              2.7,
+              -6
+            ],
+            "p2": [
+              3,
+              2.7,
+              -0.5
+            ],
+            "family": "Z",
+            "occlude": {
+              "atZ": -3,
+              "halfDepth": 0.28
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

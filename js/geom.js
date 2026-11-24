@@ -250,6 +250,19 @@
     return f2 > 0 ? Math.sqrt(f2) : null;
   }
 
+  // 齐次灭点版焦距：两正交世界方向对应灭点 v1,v2（齐次），主点 (cx,cy)。
+  // 由相机系方向点积为 0 推导，无需先把灭点转像素（对近无穷远灭点更稳）。
+  // dir_i = [(vix - viz*cx)/f, (viy - viz*cy)/f, viz]，dir1·dir2=0 解 f²。
+  function focalFromHomVPs(v1, v2, cx, cy) {
+    const a1 = v1[0] - v1[2] * cx, b1 = v1[1] - v1[2] * cy;
+    const a2 = v2[0] - v2[2] * cx, b2 = v2[1] - v2[2] * cy;
+    const num = -(a1 * a2 + b1 * b2);
+    const den = v1[2] * v2[2];
+    if (Math.abs(den) < 1e-12) return null; // 任一灭点在无穷远，焦距不可由该对解出
+    const f2 = num / den;
+    return f2 > 0 ? Math.sqrt(f2) : null;
+  }
+
   // 灭点(齐次) -> 相机系方向（单位向量），支持无穷远灭点
   function dirFromVP(vp, f, cx, cy) {
     return V.normalize([
@@ -307,6 +320,6 @@
     groundIntersection, horizonLine, grazingContour,
     lineFromPoints, fitLine, pointLineDist,
     smallestEigenvector, vanishingPoint, vpIsInfinite, vpToPixel,
-    focalFromVPs, dirFromVP, pointPolylineDist, clipPtsToRect,
+    focalFromVPs, focalFromHomVPs, dirFromVP, pointPolylineDist, clipPtsToRect,
   };
 });
